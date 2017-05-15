@@ -9,10 +9,12 @@ These files are quite large and take time to generate. Downloading and building 
 
 This data is hosted in an S3 bucket (~5TB) and crucially is uncompressed (unlike the `.tar.gz` files held on the illumina iGenomes FTP servers). AWS runs can by pull just the required files to their local file storage before running.  This has the advantage of being faster, cheaper and more reproducible.
 
-### What is included
+## What's included
 This resource is based on the [illumina iGenomes](https://support.illumina.com/sequencing/sequencing_software/igenome.html) references. These were downloaded and unpacked in April 2016.
 
-After unpacking, references were added for [STAR](https://github.com/alexdobin/STAR), [Bismark](http://www.bioinformatics.babraham.ac.uk/projects/bismark/) and [BED12](https://genome.ucsc.edu/FAQ/FAQformat.html#format1). A new reference directory was contained for each reference and the following commands run:
+After unpacking, references were added for [STAR](https://github.com/alexdobin/STAR), [Bismark](http://www.bioinformatics.babraham.ac.uk/projects/bismark/) and [BED12](https://genome.ucsc.edu/FAQ/FAQformat.html#format1). A new reference directory was contained for each reference and the index built (see commands below).
+
+**A full list of available files can be seen in this repository:  [`ngi-igenomes_file_manifest.txt`](ngi-igenomes_file_manifest.txt)**
 
 #### STAR
 ```bash
@@ -47,7 +49,7 @@ The details of the S3 bucket are as follows:
 * Region: _EU (Ireland)_
 
 ### Description of Files
-A full list of available files can be seen in [`ngi-igenomes_file_manifest.txt`](ngi-igenomes_file_manifest.txt).
+A full list of available files can be seen in [`ngi-igenomes_file_manifest.txt`](ngi-igenomes_file_manifest.txt)
 
 ### Costs, billing and authentication
 The S3 bucket is set to use the _Requester Pays_ policy. This means that our account won't be charged if lots of other people use the resource. Unfortunately, this means that access has to be limited to authenticated requests only. Usually this shouldn't be a problem, and full read-access is granted to any authenticated AWS user.
@@ -77,6 +79,8 @@ For more information and help, see the [AWS CLI user guide](http://docs.aws.amaz
 
 ### Usage with Nextflow
 [Nextflow](https://www.nextflow.io/) is a powerful workflow manager allowing the creation of bioinformatics analysis pipelines. It was created to help the transition from traditional academic HPC systems to cloud computing. As such, it has extensive built-in support for a number of AWS features. One such feature is native integration with s3. This means that you can specify paths to required reference files in your pipeline which are stored in s3 and Nextflow will automatically retrieve them.
+
+The repository contains an example Nextflow config file containing common paths and a suggested usage example: [`nextflow.config`](nextflow.config)
 
 For an example of this in action, see our [NGI-RNAseq pipeline](https://github.com/SciLifeLab/NGI-RNAseq/). The `aws` profile [config](https://github.com/SciLifeLab/NGI-RNAseq/blob/master/conf/aws.config#L61-L193) contains s3 paths and our [regular HPC config](https://github.com/SciLifeLab/NGI-RNAseq/blob/master/conf/uppmax.config#L113-L245) contains comparable regular file paths. This allows us to run the pipeline on either our HPC system or AWS with the same command and no extra setup.
 
