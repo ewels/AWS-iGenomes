@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>AWS iGenomes</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  <div class="container mt-5">
+
+    <h1 class="display-1">AWS iGenomes</h1>
+    <h2 class="text-muted mb-5">Common reference genomes hosted on AWS S3</h2>
+
+    <p>This website hosts some bash scripts which can be directly run to easily obtain reference genomes
+      where you need them. Note that they all require you to have the aws command line tools installed and
+      set up with proper authentication.</p>
+
+    <p>For more information about this resource, please see the GitHub readme at
+      <a href="https://github.com/ewels/AWS-iGenomes">https://github.com/ewels/AWS-iGenomes</a>.</p>
+
+    <h5 class="mt-5">Generic downloads:</h5>
+    <p>Script address: <a href="aws-igenomes.sh">https://ewels.github.io/AWS-iGenomes/aws-igenomes.sh</a></p>
+    <p>Quick usage:</p>
+    <pre><code>
+    curl -fsSL https://ewels.github.io/AWS-iGenomes/aws-igenomes.sh | bash
+    </code></pre>
+    <p>Advanced usage:</p>
+    <pre><code>
+    curl -fsSL https://ewels.github.io/AWS-iGenomes/aws-igenomes.sh > aws-igenomes.sh
+    bash aws-igenomes.sh --help
+    </code></pre>
+  </div>
+
+
+  <!--  JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+</html>
