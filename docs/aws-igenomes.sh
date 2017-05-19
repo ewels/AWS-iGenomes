@@ -17,6 +17,8 @@ function print_usage {
         "\t\t[-s <source name>]\n" \
         "\t\t[-b <build name>]\n" \
         "\t\t[-t <reference type>]\n" \
+        "\t\t[-o <output directory>]\n" \
+        "\t\t[-q (quiet mode)]\n" \
         "\t\t[-h (usage help)]\n\n" \
         "All command line flags are optional. If not specified,\n" \
         "the script will prompt for input.\n\n" \
