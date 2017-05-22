@@ -2,7 +2,7 @@
 
 **Common reference genomes hosted on AWS S3**
 
-![Amazon Web Services](assets/AWS_logo.png)
+![Amazon Web Services](docs/images/AWS_logo.png)
 
 ## Introduction
 In NGS bioinformatics, a typical analysis run involves aligning raw DNA sequencing reads against a known reference genome. A different reference is needed for every species, and many species have several references to choose from. Each tool then builds its own indices against these references. As such, one analysis run typically requires a number of different files. For example: raw underlying DNA sequence, annotation (GTF files) and index file for use the chosen alignment tool.
@@ -115,7 +115,7 @@ The resource was initially developed for use at the [National Genomics Infrastru
 
 ---
 
-[![SciLifeLab](assets/SciLifeLab_logo.png)](http://www.scilifelab.se/)
-[![National Genomics Infrastructure](assets/NGI_logo.png)](https://ngisweden.scilifelab.se/)
+[![SciLifeLab](docs/images/SciLifeLab_logo.png)](http://www.scilifelab.se/)
+[![National Genomics Infrastructure](docs/images/NGI_logo.png)](https://ngisweden.scilifelab.se/)
 
 ---
