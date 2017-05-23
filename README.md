@@ -106,6 +106,12 @@ We are currently in discussion with the Open Data team at Amazon about making th
 Any updates to this arrangement will be posted here. If you have any questions please get in touch with [Phil Ewels](http://phil.ewels.co.uk) (phil.ewels@scilifelab.se, [@ewels](https://github.com/ewels)) or create an issue on this repository.
 
 
+## Changelog
+
+#### [v0.1](https://github.com/ewels/AWS-iGenomes/releases/tag/0.1) - 2016-05-23
+Initial release of the resource. Repository created with file-list of the iGenomes resource, with added
+BED12, STAR and Bismark indices. Download bash script written and basic website created at https://ewels.github.io/AWS-iGenomes/
+
 ## Credits
 The [iGenomes](https://support.illumina.com/sequencing/sequencing_software/igenome.html) resource was created by illumina. All credit for the collection and standardisation of this data should go to them!
 
