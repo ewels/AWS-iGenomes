@@ -33,7 +33,68 @@ The details of the S3 bucket are as follows:
 ### Description of Files
 A full list of available files can be seen in [`ngi-igenomes_file_manifest.txt`](ngi-igenomes_file_manifest.txt)
 
-See [What's Included](#whats-included) below for more details of how these files were generated.
+The following species have reference builds available:
+
+* _Arabidopsis thaliana_
+* _Bacillus cereus_ ATCC 10987
+* _Bacillus subtilis_ 168
+* _Bos taurus_
+* _Caenorhabditis elegans_
+* _Canis familiaris_
+* _Danio rerio_
+* _**Drosophila melanogaster**_
+* _Enterobacteriophage lambda_
+* _Equus caballus_
+* _Escherichia coli_ K 12 DH10B
+* _Escherichia coli_ K 12 MG1655
+* _Gallus gallus_
+* _Glycine max_
+* _**Homo sapiens**_
+* _Macaca mulatta_
+* _**Mus musculus**_
+* _Mycobacterium tuberculosis_ H37RV
+* _Oryza sativa japonica_
+* _Pan troglodytes_
+* _PhiX_
+* _Pseudomonas aeruginosa_ PAO1
+* _Rattus norvegicus_
+* _Rhodobacter sphaeroides_ 2.4.1
+* _**Saccharomyces cerevisiae**_
+* _Schizosaccharomyces pombe_
+* _Sorangium cellulosum_ So ce 56
+* _Sorghum bicolor_
+* _Staphylococcus aureus_ NCTC 8325
+* _Sus scrofa_
+* _Zea mays_
+
+Most of these species then have references from multiple sources and builds. For example, _Homo sapiens_
+has the following:
+
+* Ensembl
+    * `GRCh37`
+* NCBI
+    * `build36.3`, `build37.1`, `build37.2`, `GRCh38`, `GRCh38Decoy`
+* UCSC
+    * `hg18`, `hg19`, `hg38`
+
+Within each reference build, the following resources are typically available (with a few exceptions):
+
+* Gene annotation in `GTF` and `BED` format
+* Sequence `FASTA` files:
+    * Whole genome files
+    * Separate chromosomes
+    * Abundant sequences
+* Alignment indices for the following tools:
+    * [Bismark](http://www.bioinformatics.babraham.ac.uk/projects/bismark/)
+    * [Bowtie](http://bowtie-bio.sourceforge.net/index.shtml)
+    * [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)
+    * [BWA](http://bio-bwa.sourceforge.net/)
+    * [STAR](https://github.com/alexdobin/STAR)
+* For some genomes:
+    * smRNA ([miRBase](http://www.mirbase.org/))
+    * Variation
+
+See [Data origin](#data-origin) below for more details of how these files were generated.
 
 ### Costs, billing and authentication
 The S3 bucket is set to use the _Requester Pays_ policy. This means that our account won't be charged if lots of other people use the resource. Unfortunately, this means that access has to be limited to authenticated requests only. Usually this shouldn't be a problem, and full read-access is granted to any authenticated AWS user.
@@ -68,7 +129,7 @@ The repository contains an example Nextflow config file containing common paths 
 
 For an example of this in action, see our [NGI-RNAseq pipeline](https://github.com/SciLifeLab/NGI-RNAseq/). The `aws` profile [config](https://github.com/SciLifeLab/NGI-RNAseq/blob/master/conf/aws.config#L61-L193) contains s3 paths and our [regular HPC config](https://github.com/SciLifeLab/NGI-RNAseq/blob/master/conf/uppmax.config#L113-L245) contains comparable regular file paths. This allows us to run the pipeline on either our HPC system or AWS with the same command and no extra setup.
 
-## What's included
+## Data origin
 This resource is based on the [illumina iGenomes](https://support.illumina.com/sequencing/sequencing_software/igenome.html) references. These were downloaded and unpacked in April 2016.
 
 After unpacking, references were added for [STAR](https://github.com/alexdobin/STAR), [Bismark](http://www.bioinformatics.babraham.ac.uk/projects/bismark/) and [BED12](https://genome.ucsc.edu/FAQ/FAQformat.html#format1). A new reference directory was contained for each reference and the index built (see commands below).
@@ -108,7 +169,7 @@ Any updates to this arrangement will be posted here. If you have any questions p
 
 ## Changelog
 
-#### [v0.1](https://github.com/ewels/AWS-iGenomes/releases/tag/v0.1) - 2016-05-23
+#### [Version v0.1](https://github.com/ewels/AWS-iGenomes/releases/tag/v0.1) - 2016-05-23
 Initial released. Repository created with file-list of the iGenomes resource, with added
 BED12, STAR and Bismark indices. Download bash script written and basic website created
 at https://ewels.github.io/AWS-iGenomes/
