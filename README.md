@@ -67,15 +67,15 @@ The following species have reference builds available:
 * _Sus scrofa_
 * _Zea mays_
 
-Most of these species then have references from multiple sources and builds. For example, _Homo sapiens_
+Most of these species then have references from multiple sources and builds. For example, _Mus musculus_
 has the following:
 
 * Ensembl
-    * `GRCh37`
+    * `GRCm38`, `NCBIM37`
 * NCBI
-    * `build36.3`, `build37.1`, `build37.2`, `GRCh38`, `GRCh38Decoy`
+    * `build37.1`, `build37.2`, `GRCm38`
 * UCSC
-    * `hg18`, `hg19`, `hg38`
+    * `mm10`, `mm9`
 
 Within each reference build, the following resources are typically available (with a few exceptions):
 
@@ -93,6 +93,8 @@ Within each reference build, the following resources are typically available (wi
 * For some genomes:
     * smRNA ([miRBase](http://www.mirbase.org/))
     * Variation
+
+An additional special-case is the GATK bundles, available for _Homo sapiens_ (`b37`, `hg19` and `hg38`).
 
 See [Data origin](#data-origin) below for more details of how these files were generated.
 
@@ -157,8 +159,18 @@ bismark_genome_preparation --bowtie2 ./
 #### BED12
 BED12 files were generated using the [`gtf2bed`](https://github.com/ExpressionAnalysis/ea-utils/blob/master/clipper/gtf2bed) tool from [ea-utils](https://expressionanalysis.github.io/ea-utils/).
 
+#### GATK Bundles
+The [GATK Resource Bundles](https://software.broadinstitute.org/gatk/download/bundle) for builds
+`b37`, `hg19` and `hg38` were downloaded from the Broad FTP server on 2017-05-25. For more information
+about their contents, please see
+[this article](https://software.broadinstitute.org/gatk/documentation/article.php?id=1213).
+
+Please note that `b37/CEUTrio.HiSeq.WGS.b37.NA12878.bam` and associated files are not included.
+This file is ~355GB and with the FTP download limiting from Broad it was going to take nearly
+a year to transfer.
+
 #### More details
-These steps were kindly done by the UPPMAX team. Full details and exactly scripts used for this can be found at [github.com/UPPMAX/bio-data](https://github.com/UPPMAX/bio-data/tree/master/igenomes/index).
+STAR, Bismark and BED12 additions were kindly done by the UPPMAX team. Full details and exactly scripts used for this can be found at [github.com/UPPMAX/bio-data](https://github.com/UPPMAX/bio-data/tree/master/igenomes/index).
 
 
 ## The Future

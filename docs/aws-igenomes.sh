@@ -80,6 +80,9 @@ BUILD_OPTS=(
     "Gallus_gallus/UCSC/galGal4::gtf::bed12::bismark::bowtie::bowtie2::bwa::star::fasta::chromosomes::abundantseq::smrna"
     "Glycine_max/Ensembl/Gm01::gtf::bed12::bismark::bowtie::bowtie2::bwa::star::fasta::chromosomes::abundantseq::smrna"
     "Homo_sapiens/Ensembl/GRCh37::gtf::bed12::bismark::bowtie::bowtie2::bwa::star::fasta::chromosomes::abundantseq::smrna::variation"
+    "Homo_sapiens/GATK/b37::gatk"
+    "Homo_sapiens/GATK/hg19::gatk"
+    "Homo_sapiens/GATK/hg38::gatk"
     "Homo_sapiens/NCBI/build36.3::gtf::bed12::bismark::bowtie::bowtie2::bwa::star::fasta::chromosomes::abundantseq::smrna"
     "Homo_sapiens/NCBI/build37.1::gtf::bed12::bismark::bowtie::bowtie2::bwa::star::fasta::chromosomes::abundantseq::smrna"
     "Homo_sapiens/NCBI/build37.2::gtf::bed12::bismark::bowtie::bowtie2::bwa::star::fasta::chromosomes::abundantseq::smrna::variation"
@@ -170,6 +173,7 @@ TYPE_SUFFIXES=(
     "abundantseq::Sequence/AbundantSequences/"
     "smrna::Annotation/SmallRNA/"
     "variation::Annotation/Variation/"
+    "gatk::"
 )
 
 # Command line flags
@@ -277,6 +281,7 @@ if [ ! $SOURCE ]; then
     done
     if [ $NUM_OPTS == 1 ]; then
         SOURCE=$LAST_MATCH
+        echo -e "\nOnly one option for source type, setting to $SOURCE \n" >&2
     else
         if [ $QUIET ]; then
             echo "No reference source specified. Disable quiet mode (-q) to see options. Exiting." >&2
@@ -317,6 +322,7 @@ if [ ! $BUILD ]; then
     done
     if [ $NUM_OPTS == 1 ]; then
         BUILD=$LAST_MATCH
+        echo -e "\nOnly one option for build type, setting to $BUILD \n" >&2
     else
         if [ $QUIET ]; then
             echo "No reference build specified. Disable quiet mode (-q) to see options. Exiting." >&2
@@ -351,18 +357,23 @@ TYPE_OPTS=()
 for i in ${BUILD_OPTS[@]}; do
     if [[ $i == "${GENOME}/${SOURCE}/${BUILD}"* ]]; then
         TYPE_OPTS=(${i//::/ })
-        TYPE_OPTS=("${TYPE_OPTS[@]:1}") # Remove path
+        TYPE_OPTS=("${TYPE_OPTS[@]:1}") # Remove first element (path)
     fi
 done
 
 # Get reference type
 if [ ! $TYPE ]; then
-    if [ $QUIET ]; then
-        echo "No reference type specified. Disable quiet mode (-q) to see options. Exiting." >&2
-        exit 1
+    if [ ${#TYPE_OPTS[@]} == 1 ]; then
+        TYPE=${TYPE_OPTS[0]}
+        echo -e "\nOnly one option for reference type, setting to $TYPE \n" >&2
+    else
+        if [ $QUIET ]; then
+            echo "No reference type specified. Disable quiet mode (-q) to see options. Exiting." >&2
+            exit 1
+        fi
+        echo "Please enter a reference type: (leave blank to see options)" >&2
+        read TYPE
     fi
-    echo "Please enter a reference type: (leave blank to see options)" >&2
-    read TYPE
 fi
 while [[ ! " ${TYPE_OPTS[@]} " =~ " ${TYPE} " ]]; do
     if [ $TYPE ]; then
@@ -380,7 +391,7 @@ while [[ ! " ${TYPE_OPTS[@]} " =~ " ${TYPE} " ]]; do
     read TYPE
 done
 
-REF_SUFFIX=
+REF_SUFFIX='unset'
 for i in "${TYPE_SUFFIXES[@]}" ; do
     k="${i%%::*}"
     v="${i##*::}"
@@ -388,7 +399,7 @@ for i in "${TYPE_SUFFIXES[@]}" ; do
         REF_SUFFIX=$v
     fi
 done
-if [ ! $REF_SUFFIX ]; then
+if [ "$REF_SUFFIX" == 'unset' ]; then
     echo "Error, could not find reference suffix!" >&2
     exit 1;
 fi
