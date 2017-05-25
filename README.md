@@ -181,6 +181,10 @@ Any updates to this arrangement will be posted here. If you have any questions p
 
 ## Changelog
 
+#### Version v0.3 (dev)
+
+* Made a web interface for generating aws s3 sync commands _(not everyone likes random command line scripts..)_
+
 #### [Version v0.2](https://github.com/ewels/AWS-iGenomes/releases/tag/v0.2) - 2016-05-25
 
 * Added GATK bundles `b37`, `hg19` and `hg38` from the Broad FTP download

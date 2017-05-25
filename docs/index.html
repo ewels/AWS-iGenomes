@@ -15,10 +15,49 @@
     .mainbody {
       padding: 50px 15px;
     }
+    .subtitle {
+      font-weight: 200;
+    }
     pre {
       background-color: #ededed;
       border-radius: 5px;
-      padding: 25px;
+      padding: 20px;
+    }
+    label {
+      font-weight: bold;
+    }
+    button {
+      cursor: pointer;
+    }
+    hr {
+      margin: 30px 0;
+    }
+    .prewrap {
+      position: relative;
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      vertical-align: middle;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .prewrap > .btn, .prewrap > pre {
+      position: relative;
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+      flex: 0 1 auto;
+      margin: 0;
+    }
+    .prewrap > .btn {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+    .prewrap > pre {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      width: 100%;
     }
     .footer {
       background-color: #ededed;
@@ -58,26 +97,96 @@
 
   <div class="container mainbody">
 
+    <img title="AWS Programs for Research and Education" src="images/AWS_logo.png" class="hidden-lg-down float-lg-right">
     <h1 class="display-1">AWS iGenomes</h1>
-    <h2 class="text-muted mb-5">Common reference genomes hosted on AWS S3</h2>
+    <h2 class="subtitle text-muted mb-5">Common reference genomes hosted on AWS S3</h2>
 
-    <p>This website hosts a bash script which can be used to easily obtain reference genomes
-      where you need them. Note that you need to have the
-      <a href="http://docs.aws.amazon.com/cli/latest/userguide/installing.html" target="_blank">aws command line tools</a>
-      installed and set up with proper authentication.</p>
-
+    <p>This resource hosts commonly used bioinformatics reference genomes with the help
+      of a grant from <a href="https://aws.amazon.com/grants/">AWS Programs for Research and Education</a>.</p>
+    <p>In order to get the references, you need to sync the files from S3 to your EC2 environment.
+      This web page contains two tools to help you with that - a <a href="#sync-command-builder">command builder</a>
+      and a <a href="#command-line-script">command-line script</a>.
     <p>For more information about this resource, please see the GitHub readme at
       <a href="https://github.com/ewels/AWS-iGenomes">https://github.com/ewels/AWS-iGenomes</a>.</p>
 
-    <p><strong>Script source:</strong> <a href="https://github.com/ewels/AWS-iGenomes/blob/master/docs/aws-igenomes.sh">https://github.com/ewels/AWS-iGenomes/blob/master/docs/aws-igenomes.sh</a></p>
-    <p><strong>Script URL:</strong> <a href="aws-igenomes.sh">https://ewels.github.io/AWS-iGenomes/aws-igenomes.sh</a></p>
-    <h5 class="mt-4">Quick usage:</h5>
-    <pre><code>curl -fsSL https://ewels.github.io/AWS-iGenomes/aws-igenomes.sh | bash</code></pre>
+    <hr>
 
-    <h5 class="mt-4">Advanced usage:</h5>
-    <pre><code>curl -fsSL https://ewels.github.io/AWS-iGenomes/aws-igenomes.sh > aws-igenomes.sh
+    <h2><a name="sync-command-builder">Sync command builder</a></h2>
+    <p>Use the dropdown boxes below to build an AWS S3 sync command for your reference.</p>
 
-bash aws-igenomes.sh --help
+    <form>
+      <div class="row">
+        <div class="form-group col-sm-3">
+          <label for="genome">Genome</label>
+          <select class="form-control" id="genome">
+            <option value="">[ select ]</option>
+            <optgroup label="Common Genomes">
+              <option value="Homo_sapiens">Homo sapiens</option>
+              <option value="Mus_musculus">Mus Musculus</option>
+              <option value="Saccharomyces_cerevisiae">Saccharomyces cerevisiae</option>
+            </optgroup>
+            <optgroup label="All Genomes" id="all_genomes"></optgroup>
+          </select>
+        </div>
+        <div class="form-group col-sm-3">
+          <label for="source">Source</label>
+          <select class="form-control" id="source" disabled>
+            <option value="">Please select a genome</option>
+          </select>
+        </div>
+        <div class="form-group col-sm-3">
+          <label for="build">Build</label>
+          <select class="form-control" id="build" disabled>
+            <option value="">Please select a source</option>
+          </select>
+        </div>
+        <div class="form-group col-sm-3">
+          <label for="type">Type</label>
+          <select class="form-control" id="type" disabled>
+            <option value="">Please select a build</option>
+          </select>
+        </div>
+      </div>
+    </form>
+
+    <h5>Bucket URL</h5>
+    <div class="prewrap" id="bucket_url_wrapper">
+      <button class="btn" data-clipboard-target="#bucket_url" disabled>Copy</button>
+      <pre><code id="bucket_url"><span class="text-muted">waiting for selection&hellip;</span></code></pre>
+    </div>
+
+    <h5>Sync command</h5>
+    <div class="prewrap" id="sync_command_wrapper">
+      <button class="btn" data-clipboard-target="#sync_command" disabled>Copy</button>
+      <pre><code id="sync_command"><span class="text-muted">waiting for selection&hellip;</span></code></pre>
+    </div>
+    <p class="text-muted">Note that the final argument in the sync command is for the local directory to sync to.
+    The above defaults to the following: <code>./references/genome/source/build/type</code></p>
+
+    <hr>
+
+    <h2><a name="command-line-script">Command-line Script</a></h2>
+    <p>You can use a bash script we've written which can be used to easily obtain reference genomes
+      where you need them. This builds the required command using either command-line prompts or
+      flags, then runs the sync command for you.</p>
+    <p>Note that you need to have the
+      <a href="http://docs.aws.amazon.com/cli/latest/userguide/installing.html" target="_blank">aws command line tools</a>
+      installed and set up with proper authentication.</p>
+
+    <h5 class="mt-4">Quick usage</h5>
+    <p>Paste this command in your terminal to download and run the script directly.</p>
+    <div class="prewrap">
+      <button class="btn btn-warning" data-clipboard-target="#aws_script_call">Copy</button>
+      <pre><code id="aws_script_call">curl -fsSL https://ewels.github.io/AWS-iGenomes/aws-igenomes.sh | bash</code></pre>
+    </div>
+
+    <h5 class="mt-4">Advanced usage</h5>
+    <p>You can save the script locally and run it with command-line flags as follows:</p>
+    <div class="prewrap">
+      <button class="btn btn-warning" data-clipboard-target="#aws_script_download">Copy</button>
+      <pre><code id="aws_script_download">curl -fsSL https://ewels.github.io/AWS-iGenomes/aws-igenomes.sh > aws-igenomes.sh</code></pre>
+    </div>
+    <pre><code>bash aws-igenomes.sh --help
 
 <span class="text-muted">
 USAGE: aws-igenomes.sh
@@ -97,6 +206,9 @@ for input and show available options.
 Please note that this script requires the AWS command
 line tools to be installed and configured for authenticated
 access.</span></code></pre>
+
+    <p><strong>Script source:</strong> <a href="https://github.com/ewels/AWS-iGenomes/blob/master/docs/aws-igenomes.sh">https://github.com/ewels/AWS-iGenomes/blob/master/docs/aws-igenomes.sh</a></p>
+    <p><strong>Script URL:</strong> <a href="aws-igenomes.sh">https://ewels.github.io/AWS-iGenomes/aws-igenomes.sh</a></p>
 
     <p>If you have any questions or feature requests, please
       <a href="https://github.com/ewels/AWS-iGenomes/issues">create an issue</a>.</p>
@@ -123,5 +235,307 @@ access.</span></code></pre>
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.1/clipboard.min.js"></script>
+  <script type="text/javascript">
+  var types = {
+      "Arabidopsis_thaliana/Ensembl/TAIR10": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Arabidopsis_thaliana/Ensembl/TAIR9": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Arabidopsis_thaliana/NCBI/build9.1": ["bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Arabidopsis_thaliana/NCBI/TAIR10": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Bacillus_cereus_ATCC_10987/NCBI/2004-02-13": ["bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq"],
+      "Bacillus_subtilis_168/Ensembl/EB2": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq"],
+      "Bos_taurus/Ensembl/Btau_4.0": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Bos_taurus/Ensembl/UMD3.1": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna", "variation"],
+      "Bos_taurus/NCBI/Btau_4.2": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Bos_taurus/NCBI/Btau_4.6.1": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Bos_taurus/NCBI/UMD_3.1": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Bos_taurus/NCBI/UMD_3.1.1": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Bos_taurus/UCSC/bosTau4": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Bos_taurus/UCSC/bosTau6": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Bos_taurus/UCSC/bosTau7": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Bos_taurus/UCSC/bosTau8": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Caenorhabditis_elegans/Ensembl/WBcel215": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Caenorhabditis_elegans/Ensembl/WBcel235": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Caenorhabditis_elegans/Ensembl/WS210": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Caenorhabditis_elegans/Ensembl/WS220": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Caenorhabditis_elegans/NCBI/WS190": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Caenorhabditis_elegans/NCBI/WS195": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Caenorhabditis_elegans/UCSC/ce10": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Caenorhabditis_elegans/UCSC/ce6": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Canis_familiaris/Ensembl/BROADD2": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Canis_familiaris/Ensembl/CanFam3.1": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Canis_familiaris/NCBI/build2.1": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Canis_familiaris/NCBI/build3.1": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Canis_familiaris/UCSC/canFam2": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Canis_familiaris/UCSC/canFam3": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Danio_rerio/Ensembl/GRCz10": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Danio_rerio/Ensembl/Zv9": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Danio_rerio/NCBI/GRCz10": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Danio_rerio/NCBI/Zv9": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Danio_rerio/UCSC/danRer10": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Danio_rerio/UCSC/danRer7": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Drosophila_melanogaster/Ensembl/BDGP5": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Drosophila_melanogaster/Ensembl/BDGP5.25": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Drosophila_melanogaster/Ensembl/BDGP6": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Drosophila_melanogaster/NCBI/build4.1": ["bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Drosophila_melanogaster/NCBI/build5": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Drosophila_melanogaster/NCBI/build5.3": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Drosophila_melanogaster/NCBI/build5.41": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Drosophila_melanogaster/UCSC/dm3": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Drosophila_melanogaster/UCSC/dm6": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Enterobacteriophage_lambda/NCBI/1993-04-28": ["bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq"],
+      "Equus_caballus/Ensembl/EquCab2": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Equus_caballus/NCBI/EquCab2.0": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Equus_caballus/UCSC/equCab2": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Escherichia_coli_K_12_DH10B/Ensembl/EB1": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq"],
+      "Escherichia_coli_K_12_DH10B/NCBI/2008-03-17": ["bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq"],
+      "Escherichia_coli_K_12_MG1655/NCBI/2001-10-15": ["bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq"],
+      "Gallus_gallus/Ensembl/Galgal4": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Gallus_gallus/Ensembl/WASHUC2": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Gallus_gallus/NCBI/build2.1": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Gallus_gallus/NCBI/build3.1": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Gallus_gallus/UCSC/galGal3": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Gallus_gallus/UCSC/galGal4": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Glycine_max/Ensembl/Gm01": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Homo_sapiens/Ensembl/GRCh37": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna", "variation"],
+      "Homo_sapiens/GATK/b37": ["gatk"],
+      "Homo_sapiens/GATK/hg19": ["gatk"],
+      "Homo_sapiens/GATK/hg38": ["gatk"],
+      "Homo_sapiens/NCBI/build36.3": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Homo_sapiens/NCBI/build37.1": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Homo_sapiens/NCBI/build37.2": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna", "variation"],
+      "Homo_sapiens/NCBI/GRCh38": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Homo_sapiens/NCBI/GRCh38Decoy": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Homo_sapiens/UCSC/hg18": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna", "variation"],
+      "Homo_sapiens/UCSC/hg19": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna", "variation"],
+      "Homo_sapiens/UCSC/hg38": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Macaca_mulatta/Ensembl/Mmul_1": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Mus_musculus/Ensembl/GRCm38": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna", "variation"],
+      "Mus_musculus/Ensembl/NCBIM37": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna", "variation"],
+      "Mus_musculus/NCBI/build37.1": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Mus_musculus/NCBI/build37.2": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Mus_musculus/NCBI/GRCm38": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna", "variation"],
+      "Mus_musculus/UCSC/mm10": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna", "variation"],
+      "Mus_musculus/UCSC/mm9": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna", "variation"],
+      "Mycobacterium_tuberculosis_H37RV/Ensembl/H37Rv.EB1": ["bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq"],
+      "Mycobacterium_tuberculosis_H37RV/NCBI/2001-09-07": ["bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq"],
+      "Oryza_sativa_japonica/Ensembl/IRGSP-1.0": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Oryza_sativa_japonica/Ensembl/MSU6": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Pan_troglodytes/Ensembl/CHIMP2.1": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Pan_troglodytes/Ensembl/CHIMP2.1.4": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Pan_troglodytes/NCBI/build2.1": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Pan_troglodytes/NCBI/build3.1": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Pan_troglodytes/UCSC/panTro2": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Pan_troglodytes/UCSC/panTro3": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Pan_troglodytes/UCSC/panTro4": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "PhiX/Illumina/RTA": ["bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq"],
+      "PhiX/NCBI/1993-04-28": ["bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq"],
+      "Pseudomonas_aeruginosa_PAO1/NCBI/2000-09-13": ["bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq"],
+      "Rattus_norvegicus/Ensembl/RGSC3.4": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna", "variation"],
+      "Rattus_norvegicus/Ensembl/Rnor_5.0": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna", "variation"],
+      "Rattus_norvegicus/Ensembl/Rnor_6.0": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna", "variation"],
+      "Rattus_norvegicus/NCBI/RGSC_v3.4": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Rattus_norvegicus/NCBI/Rnor_5.0": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna", "variation"],
+      "Rattus_norvegicus/NCBI/Rnor_6.0": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Rattus_norvegicus/UCSC/rn4": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna", "variation"],
+      "Rattus_norvegicus/UCSC/rn5": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Rattus_norvegicus/UCSC/rn6": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Rhodobacter_sphaeroides_2.4.1/NCBI/2005-10-07": ["bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq"],
+      "Saccharomyces_cerevisiae/Ensembl/EF2": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq"],
+      "Saccharomyces_cerevisiae/Ensembl/EF3": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq"],
+      "Saccharomyces_cerevisiae/Ensembl/EF4": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq"],
+      "Saccharomyces_cerevisiae/Ensembl/R64-1-1": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq"],
+      "Saccharomyces_cerevisiae/NCBI/build2.1": ["bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Saccharomyces_cerevisiae/NCBI/build3.1": ["bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Saccharomyces_cerevisiae/UCSC/sacCer2": ["bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Saccharomyces_cerevisiae/UCSC/sacCer3": ["bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Schizosaccharomyces_pombe/Ensembl/EF1": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq"],
+      "Schizosaccharomyces_pombe/Ensembl/EF2": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq"],
+      "Sorangium_cellulosum_So_ce_56/NCBI/2007-11-27": ["bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Sorghum_bicolor/Ensembl/Sbi1": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Staphylococcus_aureus_NCTC_8325/NCBI/2006-02-13": ["bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq"],
+      "Sus_scrofa/Ensembl/Sscrofa10.2": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna", "variation"],
+      "Sus_scrofa/Ensembl/Sscrofa9": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna", "variation"],
+      "Sus_scrofa/NCBI/Sscrofa10": ["bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Sus_scrofa/NCBI/Sscrofa10.2": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Sus_scrofa/NCBI/Sscrofa9.2": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Sus_scrofa/UCSC/susScr2": ["bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Sus_scrofa/UCSC/susScr3": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Zea_mays/Ensembl/AGPv2": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"],
+      "Zea_mays/Ensembl/AGPv3": ["gtf", "bed12", "bismark", "bowtie", "bowtie2", "bwa", "star", "fasta", "chromosomes", "abundantseq", "smrna"]
+  };
+  var type_nicenames = {
+      gtf: "GTF",
+      bed12: "BED",
+      bismark: "Bismark",
+      bowtie: "Bowtie 1",
+      bowtie2: "Bowtie 2",
+      bwa: "BWA",
+      star: "STAR",
+      fasta: "FASTA",
+      chromosomes: "FASTA (Chromosomes)",
+      abundantseq: "Abundant Sequences",
+      smrna: "smRNA",
+      variation: "Variation",
+      gatk: "GATK"
+  };
+  var type_suffixes = {
+      gtf: "Annotation/Genes/", // appended to command: genes.gtf
+      bed12: "Annotation/Genes/", // appended to command: genes.bed
+      bismark: "Sequence/BismarkIndex/",
+      bowtie: "Sequence/BowtieIndex/",
+      bowtie2: "Sequence/Bowtie2Index/",
+      bwa: "Sequence/BWAIndex/",
+      star: "Sequence/STARIndex/",
+      fasta: "Sequence/WholeGenomeFasta/",
+      chromosomes: "Sequence/Chromosomes/",
+      abundantseq: "Sequence/AbundantSequences/",
+      smrna: "Annotation/SmallRNA/",
+      variation: "Annotation/Variation/",
+      gatk: ""
+  };
+  $(function(){
+    // Initiate clipboard.js
+    new Clipboard('.prewrap > .btn');
+
+    // Build our variables
+    var paths = Object.keys(types);
+    var genomes = [];
+    var sources = {};
+    var builds = {};
+    for(i=0; i<paths.length; i++){
+      var s = paths[i].split('/');
+      if(genomes.indexOf(s[0]) < 0){
+        genomes.push(s[0]);
+      }
+      if(sources[s[0]] == undefined){
+        sources[s[0]] = [];
+      }
+      if(sources[s[0]].indexOf(s[1]) < 0){
+        sources[s[0]].push(s[1]);
+      }
+      if(builds[s[0]+'/'+s[1]] == undefined){
+        builds[s[0]+'/'+s[1]] = [];
+      }
+      builds[s[0]+'/'+s[1]].push(s[2]);
+    }
+    // Populate first dropdown
+    for(i=0; i<genomes.length; i++){
+      $('#all_genomes').append($('<option>', {
+        value: genomes[i],
+        text: genomes[i].replace('_',' ')
+      }));
+    }
+    // LISTENERS!
+    $('#genome').change(function(e){
+      e.preventDefault();
+      // Reset downstream dropdown
+      $('#build').html('<option value="">Please select a source</option>').attr('disabled', true);
+      $('#type').html('<option value="">Please select a build</option>').attr('disabled', true);
+      $('#bucket_url, #sync_command').html('<span class="text-muted">waiting for selection…</span>');
+      // Set up source dropdown
+      var g = $(this).val();
+      if(g == ''){
+        $('#source').html('<option value="">Please select a genome</option>').attr('disabled', true);
+      } else {
+        $('#source').html('').attr('disabled', false);
+        if(sources[g].length > 1){
+          $('#source').html('<option value="">[ select ]</option>');
+        }
+        for(i=0; i<sources[g].length; i++){
+          $('#source').append($('<option>', {
+            value: sources[g][i],
+            text: sources[g][i]
+          }));
+        }
+        $('#source').trigger('change');
+        $('#build').trigger('change');
+        $('#type').trigger('change');
+      }
+    });
+    // Source dropdown
+    $('#source').change(function(e){
+      e.preventDefault();
+      // Reset downstream dropdown
+      $('#type').html('<option value="">Please select a build</option>').attr('disabled', true);
+      $('#bucket_url, #sync_command').html('<span class="text-muted">waiting for selection…</span>');
+      // Set up build dropdown
+      var g = $('#genome').val();
+      var s = $(this).val();
+      var k = g+'/'+s;
+      if(s == ''){
+        $('#build').html('<option value="">Please select a source</option>').attr('disabled', true);
+      } else {
+        $('#build').html('').attr('disabled', false);
+        if(builds[k].length > 1){
+          $('#build').html('<option value="">[ select ]</option>');
+        }
+        for(i=0; i<builds[k].length; i++){
+          $('#build').append($('<option>', {
+            value: builds[k][i],
+            text: builds[k][i]
+          }));
+        }
+        $('#build').trigger('change');
+        $('#type').trigger('change');
+      }
+    });
+    // Build dropdown
+    $('#build').change(function(e){
+      e.preventDefault();
+      // Set up type dropdown
+      var g = $('#genome').val();
+      var s = $('#source').val();
+      var b = $(this).val();
+      var k = g+'/'+s+'/'+b;
+      if(b == ''){
+        $('#type').html('<option value="">Please select a source</option>').attr('disabled', true);
+        $('#bucket_url, #sync_command').html('<span class="text-muted">waiting for selection…</span>');
+      } else {
+        $('#type').html('').attr('disabled', false);
+        if(types[k].length > 1){
+          $('#type').html('<option value="">[ select ]</option>');
+        }
+        for(i=0; i<types[k].length; i++){
+          $('#type').append($('<option>', {
+            value: types[k][i],
+            text: type_nicenames[types[k][i]]
+          }));
+        }
+        $('#type').trigger('change');
+      }
+    });
+    // Type dropdown
+    $('#type').change(function(e){
+      var g = $('#genome').val();
+      var s = $('#source').val();
+      var b = $('#build').val();
+      var t = $(this).val();
+      if(g == '' || s == '' || b == '' || t == ''){
+        $('#bucket_url, #sync_command').html('<span class="text-muted">waiting for selection…</span>');
+        $('#bucket_url_wrapper button, #sync_command_wrapper button')
+          .removeClass('btn-warning')
+          .attr('disabled', true);
+      } else {
+        var path = g+'/'+s+'/'+b+'/'+type_suffixes[t];
+        var s3path = 's3://ngi-igenomes/igenomes/'+path;
+        var s3cmd = 'aws s3 --region eu-west-1 sync '+s3path+' ./references/'+path;
+        if(t == 'gtf'){
+          s3path += 'genes.gtf';
+          s3cmd += ' --exclude "*" --include "genes.gtf"';
+        }
+        if(t == 'bed12'){
+          s3path += 'genes.bed';
+          s3cmd += ' --exclude "*" --include "genes.bed"';
+        }
+        $('#bucket_url').html(s3path);
+        $('#sync_command').html(s3cmd);
+        $('#bucket_url_wrapper button, #sync_command_wrapper button')
+          .addClass('btn-warning')
+          .attr('disabled', false);
+      }
+    });
+  });
+  </script>
 </body>
 </html>
