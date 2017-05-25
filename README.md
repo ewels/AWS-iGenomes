@@ -181,6 +181,11 @@ Any updates to this arrangement will be posted here. If you have any questions p
 
 ## Changelog
 
+#### [Version v0.2](https://github.com/ewels/AWS-iGenomes/releases/tag/v0.2) - 2016-05-25
+
+* Added GATK bundles `b37`, `hg19` and `hg38` from the Broad FTP download
+* Minor download script updates
+
 #### [Version v0.1](https://github.com/ewels/AWS-iGenomes/releases/tag/v0.1) - 2016-05-23
 Initial released. Repository created with file-list of the iGenomes resource, with added
 BED12, STAR and Bismark indices. Download bash script written and basic website created
