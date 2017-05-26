@@ -23,10 +23,13 @@
       border-radius: 5px;
       padding: 20px;
     }
+    code {
+      color: inherit;
+    }
     label {
       font-weight: bold;
     }
-    button {
+    button, .local_code {
       cursor: pointer;
     }
     hr {
@@ -147,6 +150,25 @@
           </select>
         </div>
       </div>
+      <div class="row">
+        <div class="form-group col-sm-3">
+          <label for="region">Region</label>
+          <small class="text-muted">Currently just <code>eu-west-1</code></small>
+          <select class="form-control" id="region" disabled>
+            <option value="eu-west-1">eu-west-1</option>
+          </select>
+        </div>
+        <div class="form-group col-sm-9">
+          <label for="local">Local directory</label>
+          <small class="text-muted">Available variables:
+            <code class="local_code">{genome}</code>,
+            <code class="local_code">{source}</code>,
+            <code class="local_code">{build}</code>,
+            <code class="local_code">{type_path}</code>
+          </small>
+          <input type="text" class="form-control" id="local" value="./references/{genome}/{source}/{build}/{type_path}" style="font-family:Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;">
+        </div>
+      </div>
     </form>
 
     <h5>Bucket URL</h5>
@@ -160,8 +182,6 @@
       <button class="btn" data-clipboard-target="#sync_command" disabled>Copy</button>
       <pre><code id="sync_command"><span class="text-muted">waiting for selection&hellip;</span></code></pre>
     </div>
-    <p class="text-muted">Note that the final argument in the sync command is for the local directory to sync to.
-    The above defaults to the following: <code>./references/genome/source/build/type</code></p>
 
     <hr>
 
@@ -506,20 +526,25 @@ access.</span></code></pre>
       }
     });
     // Type dropdown
-    $('#type').change(function(e){
+    $('#type, #region, #local').change(function(e){ update_cmd(); });
+    $('#local').keyup(function(e){ update_cmd(); });
+    function update_cmd(){
       var g = $('#genome').val();
       var s = $('#source').val();
       var b = $('#build').val();
-      var t = $(this).val();
-      if(g == '' || s == '' || b == '' || t == ''){
+      var t = $('#type').val();
+      var region = $('#region').val();
+      var local = $('#local').val();
+      if(g == '' || s == '' || b == '' || t == '' || region == '' || local == ''){
         $('#bucket_url, #sync_command').html('<span class="text-muted">waiting for selection…</span>');
         $('#bucket_url_wrapper button, #sync_command_wrapper button')
           .removeClass('btn-warning')
           .attr('disabled', true);
       } else {
         var path = g+'/'+s+'/'+b+'/'+type_suffixes[t];
+        local = local.replace('{genome}',g).replace('{source}',s).replace('{build}',b).replace('{type_path}',type_suffixes[t]);
         var s3path = 's3://ngi-igenomes/igenomes/'+path;
-        var s3cmd = 'aws s3 --region eu-west-1 sync '+s3path+' ./references/'+path;
+        var s3cmd = 'aws s3 --region '+region+' sync '+s3path+' '+local;
         if(t == 'gtf'){
           s3path += 'genes.gtf';
           s3cmd += ' --exclude "*" --include "genes.gtf"';
@@ -534,7 +559,14 @@ access.</span></code></pre>
           .addClass('btn-warning')
           .attr('disabled', false);
       }
+    }
+
+    // Code example clicks
+    $('.local_code').click(function(e){
+      var ns = $('#local').val() + $(this).text();
+      $('#local').val(ns);
     });
+
   });
   </script>
 </body>

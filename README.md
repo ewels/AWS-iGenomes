@@ -1,6 +1,7 @@
 # AWS-iGenomes
 
-**Common reference genomes hosted on AWS S3**
+### Common reference genomes hosted on AWS S3
+#### Download script & command builder: [https://ewels.github.io/AWS-iGenomes/](https://ewels.github.io/AWS-iGenomes/)
 
 ![Amazon Web Services](docs/images/AWS_logo.png)
 
@@ -21,6 +22,9 @@ curl -fsSL https://ewels.github.io/AWS-iGenomes/aws-igenomes.sh | bash
 ```
 
 For more details, see [https://ewels.github.io/AWS-iGenomes/](https://ewels.github.io/AWS-iGenomes/)
+
+### Command Builder
+If you'd prefer to just get a sync command for the files you need, you can use the web-based command builder that's available at [https://ewels.github.io/AWS-iGenomes/](https://ewels.github.io/AWS-iGenomes/)
 
 ## Instructions
 ### Bucket details
