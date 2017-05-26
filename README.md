@@ -1,6 +1,3 @@
----
-permalink: README.html
----
 # AWS-iGenomes
 
 ### Common reference genomes hosted on AWS S3
