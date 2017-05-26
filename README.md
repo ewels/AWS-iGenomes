@@ -1,9 +1,12 @@
+---
+permalink: README.html
+---
 # AWS-iGenomes
 
 ### Common reference genomes hosted on AWS S3
 #### Download script & command builder: [https://ewels.github.io/AWS-iGenomes/](https://ewels.github.io/AWS-iGenomes/)
 
-![Amazon Web Services](docs/images/AWS_logo.png)
+![Amazon Web Services](images/AWS_logo.png)
 
 ## Introduction
 In NGS bioinformatics, a typical analysis run involves aligning raw DNA sequencing reads against a known reference genome. A different reference is needed for every species, and many species have several references to choose from. Each tool then builds its own indices against these references. As such, one analysis run typically requires a number of different files. For example: raw underlying DNA sequence, annotation (GTF files) and index file for use the chosen alignment tool.
@@ -13,7 +16,7 @@ These files are quite large and take time to generate. Downloading and building 
 This data is hosted in an S3 bucket (~5TB) and crucially is uncompressed (unlike the `.tar.gz` files held on the illumina iGenomes FTP servers). AWS runs can by pull just the required files to their local file storage before running.  This has the advantage of being faster, cheaper and more reproducible.
 
 ## Download Script
-To make usage easier, this repository contains a script ([`aws-igenomes.sh`](docs/aws-igenomes.sh)) which can sync the AWS-iGenomes for you. It requires the AWS command line tools to be installed and configured with authentication. Required references can be supplied on the command line or given through prompts when running the script.
+To make usage easier, this repository contains a script ([`aws-igenomes.sh`](aws-igenomes.sh)) which can sync the AWS-iGenomes for you. It requires the AWS command line tools to be installed and configured with authentication. Required references can be supplied on the command line or given through prompts when running the script.
 
 This repository is hosted using GitHub pages, so the script can be run in a single command as follows:
 
@@ -208,7 +211,7 @@ The resource was initially developed for use at the [National Genomics Infrastru
 
 ---
 
-[![SciLifeLab](docs/images/SciLifeLab_logo.png)](http://www.scilifelab.se/)
-[![National Genomics Infrastructure](docs/images/NGI_logo.png)](https://ngisweden.scilifelab.se/)
+[![SciLifeLab](images/SciLifeLab_logo.png)](http://www.scilifelab.se/)
+[![National Genomics Infrastructure](images/NGI_logo.png)](https://ngisweden.scilifelab.se/)
 
 ---
