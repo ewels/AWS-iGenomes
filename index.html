@@ -62,6 +62,9 @@
       border-top-left-radius: 0;
       width: 100%;
     }
+    #manifest_heading a {
+      color: #666;
+    }
     .footer {
       background-color: #ededed;
       color: #999;
@@ -183,6 +186,21 @@
       <pre><code id="sync_command"><span class="text-muted">waiting for selection&hellip;</span></code></pre>
     </div>
 
+    <div id="manifest_accordion" role="tablist" aria-multiselectable="true">
+      <div class="card">
+        <div class="card-header" role="tab" id="manifest_heading">
+          <h6 class="mb-0">
+            <a data-toggle="collapse" data-parent="#manifest_accordion" href="#manifest_dropdown" aria-expanded="true" aria-controls="manifest_dropdown">
+              File list for selected download
+            </a>
+          </h6>
+        </div>
+        <div id="manifest_dropdown" class="collapse" role="tabpanel" aria-labelledby="manifest_heading">
+          <pre class="card-block mb-0" id="file_manifest">Loading file manifest..</pre>
+        </div>
+      </div>
+    </div>
+
     <hr>
 
     <h2><a name="command-line-script">Command-line Script</a></h2>
@@ -252,7 +270,7 @@ access.</span></code></pre>
 
 
   <!--  JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.1/clipboard.min.js"></script>
@@ -414,9 +432,28 @@ access.</span></code></pre>
       variation: "Annotation/Variation/",
       gatk: ""
   };
+  var manifest = [];
   $(function(){
     // Initiate clipboard.js
     new Clipboard('.prewrap > .btn');
+
+    // Get the full file list
+    try {
+      $.get('ngi-igenomes_file_manifest.txt', function(data){
+        try {
+          manifest = data.match(/[^\r\n]+/g);
+          $('#file_manifest').html('waiting for selection..');
+        } catch(e){
+          $('#file_manifest').html('Error - could not load file manifest.').attr('id', 'file_manifest_error');
+          console.error(e);
+        }
+      }).fail(function() {
+        $('#file_manifest').html('Error - could not load file manifest.').attr('id', 'file_manifest_error');
+      });
+    } catch(e){
+      $('#file_manifest').html('Error - could not load file manifest.').attr('id', 'file_manifest_error');
+      console.error(e);
+    }
 
     // Build our variables
     var paths = Object.keys(types);
@@ -536,11 +573,12 @@ access.</span></code></pre>
       var region = $('#region').val();
       var local = $('#local').val();
       if(g == '' || s == '' || b == '' || t == '' || region == '' || local == ''){
-        $('#bucket_url, #sync_command').html('<span class="text-muted">waiting for selection…</span>');
+        $('#bucket_url, #sync_command, #file_manifest').html('<span class="text-muted">waiting for selection…</span>');
         $('#bucket_url_wrapper button, #sync_command_wrapper button')
           .removeClass('btn-warning')
           .attr('disabled', true);
       } else {
+        // Build path and sync command
         var path = g+'/'+s+'/'+b+'/'+type_suffixes[t];
         local = local.replace('{genome}',g).replace('{source}',s).replace('{build}',b).replace('{type_path}',type_suffixes[t]);
         var s3path = 's3://ngi-igenomes/igenomes/'+path;
@@ -558,6 +596,17 @@ access.</span></code></pre>
         $('#bucket_url_wrapper button, #sync_command_wrapper button')
           .addClass('btn-warning')
           .attr('disabled', false);
+
+        // Get the file manifest
+        if(manifest.length > 0){
+          var files = '';
+          for(i=0; i<manifest.length; i++){
+            if(manifest[i].substr(0, s3path.length) == s3path){
+              files += manifest[i] + "\n";
+            }
+          }
+          $('#file_manifest').html(files);
+        }
       }
     }
 
