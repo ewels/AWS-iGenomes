@@ -231,7 +231,7 @@ fi
 if [ ! $QUIET ]; then echo "AWS-iGenomes s3 sync script ($(date))" >&2; fi
 
 # Check that we can access the bucket (requires proper configuration)
-TEST_CMD="$S3CMD --region eu-west-1 ls s3://ngi-igenomes/igenomes/Escherichia_coli_K_12_DH10B/Ensembl/EB1/Annotation/Genes/genes.gtf > /dev/null 2>&1"
+TEST_CMD="$S3CMD --region eu-west-1 ls --request-payer requester s3://ngi-igenomes/igenomes/Escherichia_coli_K_12_DH10B/Ensembl/EB1/Annotation/Genes/genes.gtf > /dev/null 2>&1"
 if [ ! $QUIET ]; then echo "Testing AWS S3 connection..." 1>&2; fi
 eval $TEST_CMD
 if [ $? != 0 ]; then
@@ -410,7 +410,7 @@ if [ ! $OUTPUT_DIR ]; then
     OUTPUT_DIR="$(pwd)/references/${GENOME}/${SOURCE}/${BUILD}/${REF_SUFFIX}"
 fi
 
-CMD="$S3CMD --region eu-west-1 sync ${S3PATH} ${OUTPUT_DIR}"
+CMD="$S3CMD --region eu-west-1 --request-payer requester sync ${S3PATH} ${OUTPUT_DIR}"
 
 # Get single files for GTF and BED
 if [ "$TYPE" == "gtf" ]; then CMD+=' --exclude "*" --include "genes.gtf"'; fi

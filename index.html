@@ -582,7 +582,7 @@ access.</span></code></pre>
         var path = g+'/'+s+'/'+b+'/'+type_suffixes[t];
         local = local.replace('{genome}',g).replace('{source}',s).replace('{build}',b).replace('{type_path}',type_suffixes[t]);
         var s3path = 's3://ngi-igenomes/igenomes/'+path;
-        var s3cmd = 'aws s3 --region '+region+' sync '+s3path+' '+local;
+        var s3cmd = 'aws s3 --region '+region+' --request-payer requester sync '+s3path+' '+local;
         if(t == 'gtf'){
           s3path += 'genes.gtf';
           s3cmd += ' --exclude "*" --include "genes.gtf"';

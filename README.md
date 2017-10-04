@@ -33,6 +33,7 @@ The details of the S3 bucket are as follows:
 * Bucket Name: `ngi-igenomes`
 * Bucket ARN: `arn:aws:s3:::ngi-igenomes`
 * Region: _EU (Ireland)_
+* Access Policy: _Requester Pays_
 
 ### Description of Files
 A full list of available files can be seen in [`ngi-igenomes_file_manifest.txt`](ngi-igenomes_file_manifest.txt)
@@ -112,10 +113,12 @@ Note that if you are running in the same region as this S3 bucket (`eu-west`, Ir
 ### Basic Usage
 How you use this resource largely depends on how you're using AWS. Very generally however, you can retrieve your required data by using the [AWS Command Line Interface](https://aws.amazon.com/cli/).
 
+Note that most AWS CLI commands require the `--request-payer requester` flag to explicitly confirm that you are willing to pay the request costs. Without this you will get a somewhat confusing `An error occurred (AccessDenied)` message.
+
 For example, using the `aws sync` command:
 
 ```bash
-aws s3 sync s3://ngi-igenomes/igenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/STARIndex/ ./my_refs/
+aws s3 sync --request-payer requester s3://ngi-igenomes/igenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/STARIndex/ ./my_refs/
 ```
 
 If the `aws` tool isn't installed, probably the easiest way to get it is using `pip`:
