@@ -33,7 +33,6 @@ The details of the S3 bucket are as follows:
 * Bucket Name: `ngi-igenomes`
 * Bucket ARN: `arn:aws:s3:::ngi-igenomes`
 * Region: _EU (Ireland)_
-* Access Policy: _Requester Pays_
 
 ### Description of Files
 A full list of available files can be seen in [`ngi-igenomes_file_manifest.txt`](ngi-igenomes_file_manifest.txt)
@@ -104,21 +103,23 @@ An additional special-case is the GATK bundles, available for _Homo sapiens_ (`b
 See [Data origin](#data-origin) below for more details of how these files were generated.
 
 ### Costs, billing and authentication
-The S3 bucket is set to use the _Requester Pays_ policy. This means that our account won't be charged if lots of other people use the resource. Unfortunately, this means that access has to be limited to authenticated requests only. Usually this shouldn't be a problem, and full read-access is granted to any authenticated AWS user.
+The S3 bucket is currently set to be completely open access (there were problems with the previous _Requester Pays_
+policy). This will remain the case until the credits awarded to fund this project from Amazon run out or expire
+(hopefully stable for some time yet).
 
-Note that if you are running in the same region as this S3 bucket (`eu-west`, Ireland) then there should be no data transfer fees and the resource should be free to use. From the [EC2 FAQ](https://aws.amazon.com/ec2/faqs/):
+Note that if if possible, it's best for us if you run in the same region as this S3 bucket (`eu-west`, Ireland).
+Then there should be no data transfer fees and the resource should stay around for longer.
+From the [EC2 FAQ](https://aws.amazon.com/ec2/faqs/):
 
 > There is no Data Transfer charge between two Amazon Web Services within the same region (i.e. between Amazon EC2 US West and another AWS service in the US West). Data transferred between AWS services in different regions will be charged as Internet Data Transfer on both sides of the transfer.
 
 ### Basic Usage
 How you use this resource largely depends on how you're using AWS. Very generally however, you can retrieve your required data by using the [AWS Command Line Interface](https://aws.amazon.com/cli/).
 
-Note that most AWS CLI commands require the `--request-payer requester` flag to explicitly confirm that you are willing to pay the request costs. Without this you will get a somewhat confusing `An error occurred (AccessDenied)` message.
-
 For example, using the `aws sync` command:
 
 ```bash
-aws s3 sync --request-payer requester s3://ngi-igenomes/igenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/STARIndex/ ./my_refs/
+aws s3 sync s3://ngi-igenomes/igenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/STARIndex/ ./my_refs/
 ```
 
 If the `aws` tool isn't installed, probably the easiest way to get it is using `pip`:
