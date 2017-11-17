@@ -591,7 +591,7 @@ s3://ngi-igenomes/igenomes/Bos_taurus/Ensembl/Btau_4.0/Sequence/Chromosomes/MT.f
 s3://ngi-igenomes/igenomes/Bos_taurus/Ensembl/Btau_4.0/Sequence/Chromosomes/X.fa
 s3://ngi-igenomes/igenomes/Bos_taurus/Ensembl/Btau_4.0/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Bos_taurus/Ensembl/Btau_4.0/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Bos_taurus/Ensembl/Btau_4.0/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Bos_taurus/Ensembl/Btau_4.0/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Bos_taurus/Ensembl/Btau_4.0/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Bos_taurus/Ensembl/Btau_4.0/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Bos_taurus/Ensembl/Btau_4.0/Sequence/STARIndex/chrName.txt
@@ -707,7 +707,7 @@ s3://ngi-igenomes/igenomes/Bos_taurus/Ensembl/UMD3.1/Sequence/Chromosomes/MT.fa
 s3://ngi-igenomes/igenomes/Bos_taurus/Ensembl/UMD3.1/Sequence/Chromosomes/X.fa
 s3://ngi-igenomes/igenomes/Bos_taurus/Ensembl/UMD3.1/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Bos_taurus/Ensembl/UMD3.1/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Bos_taurus/Ensembl/UMD3.1/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Bos_taurus/Ensembl/UMD3.1/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Bos_taurus/Ensembl/UMD3.1/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Bos_taurus/Ensembl/UMD3.1/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Bos_taurus/Ensembl/UMD3.1/Sequence/STARIndex/chrName.txt
@@ -823,7 +823,7 @@ s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/Btau_4.2/Sequence/Chromosomes/MT.fa
 s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/Btau_4.2/Sequence/Chromosomes/X.fa
 s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/Btau_4.2/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/Btau_4.2/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Bos_taurus/NCBI/Btau_4.2/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/Btau_4.2/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/Btau_4.2/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/Btau_4.2/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/Btau_4.2/Sequence/STARIndex/chrName.txt
@@ -936,7 +936,7 @@ s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/Btau_4.6.1/Sequence/Chromosomes/X.fa
 s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/Btau_4.6.1/Sequence/Chromosomes/Y.fa
 s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/Btau_4.6.1/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/Btau_4.6.1/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Bos_taurus/NCBI/Btau_4.6.1/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/Btau_4.6.1/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/Btau_4.6.1/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/Btau_4.6.1/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/Btau_4.6.1/Sequence/STARIndex/chrName.txt
@@ -1048,7 +1048,7 @@ s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/UMD_3.1.1/Sequence/Chromosomes/MT.fa
 s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/UMD_3.1.1/Sequence/Chromosomes/X.fa
 s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/UMD_3.1.1/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/UMD_3.1.1/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Bos_taurus/NCBI/UMD_3.1.1/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/UMD_3.1.1/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/UMD_3.1.1/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/UMD_3.1.1/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/UMD_3.1.1/Sequence/STARIndex/chrName.txt
@@ -1162,7 +1162,7 @@ s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/UMD_3.1/Sequence/Chromosomes/MT.fa
 s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/UMD_3.1/Sequence/Chromosomes/X.fa
 s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/UMD_3.1/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/UMD_3.1/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Bos_taurus/NCBI/UMD_3.1/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/UMD_3.1/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/UMD_3.1/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/UMD_3.1/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Bos_taurus/NCBI/UMD_3.1/Sequence/STARIndex/chrName.txt
@@ -1277,7 +1277,7 @@ s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau4/Sequence/Chromosomes/chrM.fa
 s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau4/Sequence/Chromosomes/chrX.fa
 s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau4/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau4/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Bos_taurus/UCSC/bosTau4/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau4/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau4/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau4/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau4/Sequence/STARIndex/chrName.txt
@@ -1392,7 +1392,7 @@ s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau6/Sequence/Chromosomes/chrM.fa
 s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau6/Sequence/Chromosomes/chrX.fa
 s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau6/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau6/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Bos_taurus/UCSC/bosTau6/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau6/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau6/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau6/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau6/Sequence/STARIndex/chrName.txt
@@ -1508,7 +1508,7 @@ s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau7/Sequence/Chromosomes/chrX.fa
 s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau7/Sequence/Chromosomes/chrY.fa
 s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau7/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau7/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Bos_taurus/UCSC/bosTau7/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau7/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau7/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau7/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau7/Sequence/STARIndex/chrName.txt
@@ -1623,7 +1623,7 @@ s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau8/Sequence/Chromosomes/chrM.fa
 s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau8/Sequence/Chromosomes/chrX.fa
 s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau8/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau8/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Bos_taurus/UCSC/bosTau8/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau8/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau8/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau8/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Bos_taurus/UCSC/bosTau8/Sequence/STARIndex/chrName.txt
@@ -2468,7 +2468,7 @@ s3://ngi-igenomes/igenomes/Canis_familiaris/Ensembl/BROADD2/Sequence/Chromosomes
 s3://ngi-igenomes/igenomes/Canis_familiaris/Ensembl/BROADD2/Sequence/Chromosomes/X.fa
 s3://ngi-igenomes/igenomes/Canis_familiaris/Ensembl/BROADD2/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Canis_familiaris/Ensembl/BROADD2/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Canis_familiaris/Ensembl/BROADD2/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Canis_familiaris/Ensembl/BROADD2/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Canis_familiaris/Ensembl/BROADD2/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Canis_familiaris/Ensembl/BROADD2/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Canis_familiaris/Ensembl/BROADD2/Sequence/STARIndex/chrName.txt
@@ -2591,7 +2591,7 @@ s3://ngi-igenomes/igenomes/Canis_familiaris/Ensembl/CanFam3.1/Sequence/Chromosom
 s3://ngi-igenomes/igenomes/Canis_familiaris/Ensembl/CanFam3.1/Sequence/Chromosomes/X.fa
 s3://ngi-igenomes/igenomes/Canis_familiaris/Ensembl/CanFam3.1/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Canis_familiaris/Ensembl/CanFam3.1/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Canis_familiaris/Ensembl/CanFam3.1/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Canis_familiaris/Ensembl/CanFam3.1/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Canis_familiaris/Ensembl/CanFam3.1/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Canis_familiaris/Ensembl/CanFam3.1/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Canis_familiaris/Ensembl/CanFam3.1/Sequence/STARIndex/chrName.txt
@@ -2716,7 +2716,7 @@ s3://ngi-igenomes/igenomes/Canis_familiaris/NCBI/build2.1/Sequence/Chromosomes/M
 s3://ngi-igenomes/igenomes/Canis_familiaris/NCBI/build2.1/Sequence/Chromosomes/X.fa
 s3://ngi-igenomes/igenomes/Canis_familiaris/NCBI/build2.1/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Canis_familiaris/NCBI/build2.1/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Canis_familiaris/NCBI/build2.1/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Canis_familiaris/NCBI/build2.1/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Canis_familiaris/NCBI/build2.1/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Canis_familiaris/NCBI/build2.1/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Canis_familiaris/NCBI/build2.1/Sequence/STARIndex/chrName.txt
@@ -2839,7 +2839,7 @@ s3://ngi-igenomes/igenomes/Canis_familiaris/NCBI/build3.1/Sequence/Chromosomes/M
 s3://ngi-igenomes/igenomes/Canis_familiaris/NCBI/build3.1/Sequence/Chromosomes/X.fa
 s3://ngi-igenomes/igenomes/Canis_familiaris/NCBI/build3.1/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Canis_familiaris/NCBI/build3.1/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Canis_familiaris/NCBI/build3.1/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Canis_familiaris/NCBI/build3.1/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Canis_familiaris/NCBI/build3.1/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Canis_familiaris/NCBI/build3.1/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Canis_familiaris/NCBI/build3.1/Sequence/STARIndex/chrName.txt
@@ -2964,7 +2964,7 @@ s3://ngi-igenomes/igenomes/Canis_familiaris/UCSC/canFam2/Sequence/Chromosomes/ch
 s3://ngi-igenomes/igenomes/Canis_familiaris/UCSC/canFam2/Sequence/Chromosomes/chrX.fa
 s3://ngi-igenomes/igenomes/Canis_familiaris/UCSC/canFam2/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Canis_familiaris/UCSC/canFam2/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Canis_familiaris/UCSC/canFam2/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Canis_familiaris/UCSC/canFam2/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Canis_familiaris/UCSC/canFam2/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Canis_familiaris/UCSC/canFam2/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Canis_familiaris/UCSC/canFam2/Sequence/STARIndex/chrName.txt
@@ -3088,7 +3088,7 @@ s3://ngi-igenomes/igenomes/Canis_familiaris/UCSC/canFam3/Sequence/Chromosomes/ch
 s3://ngi-igenomes/igenomes/Canis_familiaris/UCSC/canFam3/Sequence/Chromosomes/chrX.fa
 s3://ngi-igenomes/igenomes/Canis_familiaris/UCSC/canFam3/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Canis_familiaris/UCSC/canFam3/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Canis_familiaris/UCSC/canFam3/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Canis_familiaris/UCSC/canFam3/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Canis_familiaris/UCSC/canFam3/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Canis_familiaris/UCSC/canFam3/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Canis_familiaris/UCSC/canFam3/Sequence/STARIndex/chrName.txt
@@ -3196,7 +3196,7 @@ s3://ngi-igenomes/igenomes/Danio_rerio/Ensembl/GRCz10/Sequence/Chromosomes/9.fa
 s3://ngi-igenomes/igenomes/Danio_rerio/Ensembl/GRCz10/Sequence/Chromosomes/MT.fa
 s3://ngi-igenomes/igenomes/Danio_rerio/Ensembl/GRCz10/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Danio_rerio/Ensembl/GRCz10/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Danio_rerio/Ensembl/GRCz10/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Danio_rerio/Ensembl/GRCz10/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Danio_rerio/Ensembl/GRCz10/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Danio_rerio/Ensembl/GRCz10/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Danio_rerio/Ensembl/GRCz10/Sequence/STARIndex/chrName.txt
@@ -3305,7 +3305,7 @@ s3://ngi-igenomes/igenomes/Danio_rerio/Ensembl/Zv9/Sequence/Chromosomes/9.fa
 s3://ngi-igenomes/igenomes/Danio_rerio/Ensembl/Zv9/Sequence/Chromosomes/MT.fa
 s3://ngi-igenomes/igenomes/Danio_rerio/Ensembl/Zv9/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Danio_rerio/Ensembl/Zv9/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Danio_rerio/Ensembl/Zv9/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Danio_rerio/Ensembl/Zv9/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Danio_rerio/Ensembl/Zv9/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Danio_rerio/Ensembl/Zv9/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Danio_rerio/Ensembl/Zv9/Sequence/STARIndex/chrName.txt
@@ -3413,7 +3413,7 @@ s3://ngi-igenomes/igenomes/Danio_rerio/NCBI/GRCz10/Sequence/Chromosomes/9.fa
 s3://ngi-igenomes/igenomes/Danio_rerio/NCBI/GRCz10/Sequence/Chromosomes/MT.fa
 s3://ngi-igenomes/igenomes/Danio_rerio/NCBI/GRCz10/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Danio_rerio/NCBI/GRCz10/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Danio_rerio/NCBI/GRCz10/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Danio_rerio/NCBI/GRCz10/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Danio_rerio/NCBI/GRCz10/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Danio_rerio/NCBI/GRCz10/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Danio_rerio/NCBI/GRCz10/Sequence/STARIndex/chrName.txt
@@ -3522,7 +3522,7 @@ s3://ngi-igenomes/igenomes/Danio_rerio/NCBI/Zv9/Sequence/Chromosomes/9.fa
 s3://ngi-igenomes/igenomes/Danio_rerio/NCBI/Zv9/Sequence/Chromosomes/MT.fa
 s3://ngi-igenomes/igenomes/Danio_rerio/NCBI/Zv9/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Danio_rerio/NCBI/Zv9/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Danio_rerio/NCBI/Zv9/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Danio_rerio/NCBI/Zv9/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Danio_rerio/NCBI/Zv9/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Danio_rerio/NCBI/Zv9/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Danio_rerio/NCBI/Zv9/Sequence/STARIndex/chrName.txt
@@ -3631,7 +3631,7 @@ s3://ngi-igenomes/igenomes/Danio_rerio/UCSC/danRer10/Sequence/Chromosomes/chr9.f
 s3://ngi-igenomes/igenomes/Danio_rerio/UCSC/danRer10/Sequence/Chromosomes/chrM.fa
 s3://ngi-igenomes/igenomes/Danio_rerio/UCSC/danRer10/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Danio_rerio/UCSC/danRer10/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Danio_rerio/UCSC/danRer10/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Danio_rerio/UCSC/danRer10/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Danio_rerio/UCSC/danRer10/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Danio_rerio/UCSC/danRer10/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Danio_rerio/UCSC/danRer10/Sequence/STARIndex/chrName.txt
@@ -3741,7 +3741,7 @@ s3://ngi-igenomes/igenomes/Danio_rerio/UCSC/danRer7/Sequence/Chromosomes/chr9.fa
 s3://ngi-igenomes/igenomes/Danio_rerio/UCSC/danRer7/Sequence/Chromosomes/chrM.fa
 s3://ngi-igenomes/igenomes/Danio_rerio/UCSC/danRer7/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Danio_rerio/UCSC/danRer7/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Danio_rerio/UCSC/danRer7/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Danio_rerio/UCSC/danRer7/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Danio_rerio/UCSC/danRer7/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Danio_rerio/UCSC/danRer7/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Danio_rerio/UCSC/danRer7/Sequence/STARIndex/chrName.txt
@@ -4750,7 +4750,7 @@ s3://ngi-igenomes/igenomes/Equus_caballus/Ensembl/EquCab2/Sequence/Chromosomes/9
 s3://ngi-igenomes/igenomes/Equus_caballus/Ensembl/EquCab2/Sequence/Chromosomes/X.fa
 s3://ngi-igenomes/igenomes/Equus_caballus/Ensembl/EquCab2/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Equus_caballus/Ensembl/EquCab2/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Equus_caballus/Ensembl/EquCab2/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Equus_caballus/Ensembl/EquCab2/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Equus_caballus/Ensembl/EquCab2/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Equus_caballus/Ensembl/EquCab2/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Equus_caballus/Ensembl/EquCab2/Sequence/STARIndex/chrName.txt
@@ -4864,7 +4864,7 @@ s3://ngi-igenomes/igenomes/Equus_caballus/NCBI/EquCab2.0/Sequence/Chromosomes/9.
 s3://ngi-igenomes/igenomes/Equus_caballus/NCBI/EquCab2.0/Sequence/Chromosomes/X.fa
 s3://ngi-igenomes/igenomes/Equus_caballus/NCBI/EquCab2.0/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Equus_caballus/NCBI/EquCab2.0/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Equus_caballus/NCBI/EquCab2.0/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Equus_caballus/NCBI/EquCab2.0/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Equus_caballus/NCBI/EquCab2.0/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Equus_caballus/NCBI/EquCab2.0/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Equus_caballus/NCBI/EquCab2.0/Sequence/STARIndex/chrName.txt
@@ -4981,7 +4981,7 @@ s3://ngi-igenomes/igenomes/Equus_caballus/UCSC/equCab2/Sequence/Chromosomes/chrM
 s3://ngi-igenomes/igenomes/Equus_caballus/UCSC/equCab2/Sequence/Chromosomes/chrX.fa
 s3://ngi-igenomes/igenomes/Equus_caballus/UCSC/equCab2/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Equus_caballus/UCSC/equCab2/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Equus_caballus/UCSC/equCab2/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Equus_caballus/UCSC/equCab2/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Equus_caballus/UCSC/equCab2/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Equus_caballus/UCSC/equCab2/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Equus_caballus/UCSC/equCab2/Sequence/STARIndex/chrName.txt
@@ -6113,7 +6113,7 @@ s3://ngi-igenomes/igenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/Chromosomes/X.fa
 s3://ngi-igenomes/igenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/Chromosomes/Y.fa
 s3://ngi-igenomes/igenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/STARIndex/chrName.txt
@@ -6524,7 +6524,7 @@ s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/GRCh38/Sequence/Chromosomes/chrY.fa
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/GRCh38/Sequence/Chromosomes/chrY_KI270740v1_random.fa
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/GRCh38/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/GRCh38/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Homo_sapiens/NCBI/GRCh38/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/GRCh38/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/GRCh38/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/GRCh38/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/GRCh38/Sequence/STARIndex/chrName.txt
@@ -9192,7 +9192,7 @@ s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/GRCh38Decoy/Sequence/Chromosomes/ch
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/GRCh38Decoy/Sequence/Chromosomes/chrY_KI270740v1_random.fa
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/GRCh38Decoy/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/GRCh38Decoy/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Homo_sapiens/NCBI/GRCh38Decoy/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/GRCh38Decoy/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/GRCh38Decoy/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/GRCh38Decoy/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/GRCh38Decoy/Sequence/STARIndex/chrName.txt
@@ -9305,7 +9305,7 @@ s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/build36.3/Sequence/Chromosomes/Y.fa
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/build36.3/Sequence/Methylation/hs_ref_allCGsites_RefSeq36.1_probeDesignInputs.tsv.gz
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/build36.3/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/build36.3/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Homo_sapiens/NCBI/build36.3/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/build36.3/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/build36.3/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/build36.3/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/build36.3/Sequence/STARIndex/chrName.txt
@@ -9417,7 +9417,7 @@ s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/build37.1/Sequence/Chromosomes/X.fa
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/build37.1/Sequence/Chromosomes/Y.fa
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/build37.1/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/build37.1/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Homo_sapiens/NCBI/build37.1/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/build37.1/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/build37.1/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/build37.1/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/build37.1/Sequence/STARIndex/chrName.txt
@@ -9578,7 +9578,7 @@ s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/build37.2/Sequence/Chromosomes/Y.fa
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/build37.2/Sequence/Methylation/hs_ref_allCGsites_RefSeq37_probeDesignInput.tsv.gz
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/build37.2/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/build37.2/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Homo_sapiens/NCBI/build37.2/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/build37.2/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/build37.2/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/build37.2/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Homo_sapiens/NCBI/build37.2/Sequence/STARIndex/chrName.txt
@@ -9696,7 +9696,7 @@ s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg18/Sequence/Chromosomes/chrX.fa
 s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg18/Sequence/Chromosomes/chrY.fa
 s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg18/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg18/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Homo_sapiens/UCSC/hg18/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg18/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg18/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg18/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg18/Sequence/STARIndex/chrName.txt
@@ -9729,9 +9729,9 @@ s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg19/Annotation/README.txt
 s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg19/Annotation/SmallRNA/hairpin.fa
 s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg19/Annotation/SmallRNA/mature.fa
 s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg19/Annotation/Variation/snp135.txt
-s3://ngi-igenomes/ igenomes/Homo_sapiens/UCSC/hg19/Annotation/Variation/snp137.txt
-s3://ngi-igenomes/ igenomes/Homo_sapiens/UCSC/hg19/Annotation/Variation/snp138.txt
-s3://ngi-igenomes/ igenomes/Homo_sapiens/UCSC/hg19/Annotation/Variation/snp142.txt
+s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg19/Annotation/Variation/snp137.txt
+s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg19/Annotation/Variation/snp138.txt
+s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg19/Annotation/Variation/snp142.txt
 s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg19/Annotation/Variation/snp142.txt.idx
 s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg19/Annotation/Variation/snp142.vcf
 s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg19/Sequence/AbundantSequences/adapter_contam1.fa
@@ -9908,7 +9908,7 @@ s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg19/Sequence/MDSBowtieIndex/sno.tx
 s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg19/Sequence/MDSBowtieIndex/tRNA.txt
 s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg19/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg19/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Homo_sapiens/UCSC/hg19/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg19/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg19/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg19/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg19/Sequence/STARIndex/chrName.txt
@@ -10205,7 +10205,7 @@ s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg38/Sequence/Chromosomes/chrY.fa
 s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg38/Sequence/Chromosomes/chrY_KI270740v1_random.fa
 s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg38/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg38/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Homo_sapiens/UCSC/hg38/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg38/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg38/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg38/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg38/Sequence/STARIndex/chrName.txt
@@ -10310,7 +10310,7 @@ s3://ngi-igenomes/igenomes/Macaca_mulatta/Ensembl/Mmul_1/Sequence/Chromosomes/MT
 s3://ngi-igenomes/igenomes/Macaca_mulatta/Ensembl/Mmul_1/Sequence/Chromosomes/X.fa
 s3://ngi-igenomes/igenomes/Macaca_mulatta/Ensembl/Mmul_1/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Macaca_mulatta/Ensembl/Mmul_1/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Macaca_mulatta/Ensembl/Mmul_1/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Macaca_mulatta/Ensembl/Mmul_1/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Macaca_mulatta/Ensembl/Mmul_1/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Macaca_mulatta/Ensembl/Mmul_1/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Macaca_mulatta/Ensembl/Mmul_1/Sequence/STARIndex/chrName.txt
@@ -10418,7 +10418,7 @@ s3://ngi-igenomes/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/Chromosomes/X.fa
 s3://ngi-igenomes/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/Chromosomes/Y.fa
 s3://ngi-igenomes/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/STARIndex/chrName.txt
@@ -10525,7 +10525,7 @@ s3://ngi-igenomes/igenomes/Mus_musculus/Ensembl/NCBIM37/Sequence/Chromosomes/X.f
 s3://ngi-igenomes/igenomes/Mus_musculus/Ensembl/NCBIM37/Sequence/Chromosomes/Y.fa
 s3://ngi-igenomes/igenomes/Mus_musculus/Ensembl/NCBIM37/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Mus_musculus/Ensembl/NCBIM37/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Mus_musculus/Ensembl/NCBIM37/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Mus_musculus/Ensembl/NCBIM37/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Mus_musculus/Ensembl/NCBIM37/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Mus_musculus/Ensembl/NCBIM37/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Mus_musculus/Ensembl/NCBIM37/Sequence/STARIndex/chrName.txt
@@ -10675,7 +10675,7 @@ s3://ngi-igenomes/igenomes/Mus_musculus/NCBI/GRCm38/Sequence/Chromosomes/X.fa
 s3://ngi-igenomes/igenomes/Mus_musculus/NCBI/GRCm38/Sequence/Chromosomes/Y.fa
 s3://ngi-igenomes/igenomes/Mus_musculus/NCBI/GRCm38/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Mus_musculus/NCBI/GRCm38/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Mus_musculus/NCBI/GRCm38/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Mus_musculus/NCBI/GRCm38/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Mus_musculus/NCBI/GRCm38/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Mus_musculus/NCBI/GRCm38/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Mus_musculus/NCBI/GRCm38/Sequence/STARIndex/chrName.txt
@@ -10783,7 +10783,7 @@ s3://ngi-igenomes/igenomes/Mus_musculus/NCBI/build37.1/Sequence/Chromosomes/X.fa
 s3://ngi-igenomes/igenomes/Mus_musculus/NCBI/build37.1/Sequence/Chromosomes/Y.fa
 s3://ngi-igenomes/igenomes/Mus_musculus/NCBI/build37.1/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Mus_musculus/NCBI/build37.1/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Mus_musculus/NCBI/build37.1/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Mus_musculus/NCBI/build37.1/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Mus_musculus/NCBI/build37.1/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Mus_musculus/NCBI/build37.1/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Mus_musculus/NCBI/build37.1/Sequence/STARIndex/chrName.txt
@@ -10889,7 +10889,7 @@ s3://ngi-igenomes/igenomes/Mus_musculus/NCBI/build37.2/Sequence/Chromosomes/X.fa
 s3://ngi-igenomes/igenomes/Mus_musculus/NCBI/build37.2/Sequence/Chromosomes/Y.fa
 s3://ngi-igenomes/igenomes/Mus_musculus/NCBI/build37.2/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Mus_musculus/NCBI/build37.2/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Mus_musculus/NCBI/build37.2/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Mus_musculus/NCBI/build37.2/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Mus_musculus/NCBI/build37.2/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Mus_musculus/NCBI/build37.2/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Mus_musculus/NCBI/build37.2/Sequence/STARIndex/chrName.txt
@@ -10917,7 +10917,7 @@ s3://ngi-igenomes/igenomes/Mus_musculus/UCSC/mm10/Annotation/README.txt
 s3://ngi-igenomes/igenomes/Mus_musculus/UCSC/mm10/Annotation/SmallRNA/hairpin.fa
 s3://ngi-igenomes/igenomes/Mus_musculus/UCSC/mm10/Annotation/SmallRNA/mature.fa
 s3://ngi-igenomes/igenomes/Mus_musculus/UCSC/mm10/Annotation/Variation/snp137.txt
-s3://ngi-igenomes/ igenomes/Mus_musculus/UCSC/mm10/Annotation/Variation/snp138.txt
+s3://ngi-igenomes/igenomes/Mus_musculus/UCSC/mm10/Annotation/Variation/snp138.txt
 s3://ngi-igenomes/igenomes/Mus_musculus/UCSC/mm10/Sequence/AbundantSequences/adapter_contam1.fa
 s3://ngi-igenomes/igenomes/Mus_musculus/UCSC/mm10/Sequence/AbundantSequences/chrM.fa
 s3://ngi-igenomes/igenomes/Mus_musculus/UCSC/mm10/Sequence/AbundantSequences/musRibosomal.fa
@@ -10998,7 +10998,7 @@ s3://ngi-igenomes/igenomes/Mus_musculus/UCSC/mm10/Sequence/Chromosomes/chrX.fa
 s3://ngi-igenomes/igenomes/Mus_musculus/UCSC/mm10/Sequence/Chromosomes/chrY.fa
 s3://ngi-igenomes/igenomes/Mus_musculus/UCSC/mm10/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Mus_musculus/UCSC/mm10/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Mus_musculus/UCSC/mm10/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Mus_musculus/UCSC/mm10/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Mus_musculus/UCSC/mm10/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Mus_musculus/UCSC/mm10/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Mus_musculus/UCSC/mm10/Sequence/STARIndex/chrName.txt
@@ -11110,7 +11110,7 @@ s3://ngi-igenomes/igenomes/Mus_musculus/UCSC/mm9/Sequence/Chromosomes/chrX.fa
 s3://ngi-igenomes/igenomes/Mus_musculus/UCSC/mm9/Sequence/Chromosomes/chrY.fa
 s3://ngi-igenomes/igenomes/Mus_musculus/UCSC/mm9/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Mus_musculus/UCSC/mm9/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Mus_musculus/UCSC/mm9/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Mus_musculus/UCSC/mm9/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Mus_musculus/UCSC/mm9/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Mus_musculus/UCSC/mm9/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Mus_musculus/UCSC/mm9/Sequence/STARIndex/chrName.txt
@@ -11552,7 +11552,7 @@ s3://ngi-igenomes/igenomes/Pan_troglodytes/Ensembl/CHIMP2.1.4/Sequence/Chromosom
 s3://ngi-igenomes/igenomes/Pan_troglodytes/Ensembl/CHIMP2.1.4/Sequence/Chromosomes/Y.fa
 s3://ngi-igenomes/igenomes/Pan_troglodytes/Ensembl/CHIMP2.1.4/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Pan_troglodytes/Ensembl/CHIMP2.1.4/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Pan_troglodytes/Ensembl/CHIMP2.1.4/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Pan_troglodytes/Ensembl/CHIMP2.1.4/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Pan_troglodytes/Ensembl/CHIMP2.1.4/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Pan_troglodytes/Ensembl/CHIMP2.1.4/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Pan_troglodytes/Ensembl/CHIMP2.1.4/Sequence/STARIndex/chrName.txt
@@ -11661,7 +11661,7 @@ s3://ngi-igenomes/igenomes/Pan_troglodytes/Ensembl/CHIMP2.1/Sequence/Chromosomes
 s3://ngi-igenomes/igenomes/Pan_troglodytes/Ensembl/CHIMP2.1/Sequence/Chromosomes/Y.fa
 s3://ngi-igenomes/igenomes/Pan_troglodytes/Ensembl/CHIMP2.1/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Pan_troglodytes/Ensembl/CHIMP2.1/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Pan_troglodytes/Ensembl/CHIMP2.1/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Pan_troglodytes/Ensembl/CHIMP2.1/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Pan_troglodytes/Ensembl/CHIMP2.1/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Pan_troglodytes/Ensembl/CHIMP2.1/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Pan_troglodytes/Ensembl/CHIMP2.1/Sequence/STARIndex/chrName.txt
@@ -11770,7 +11770,7 @@ s3://ngi-igenomes/igenomes/Pan_troglodytes/NCBI/build2.1/Sequence/Chromosomes/X.
 s3://ngi-igenomes/igenomes/Pan_troglodytes/NCBI/build2.1/Sequence/Chromosomes/Y.fa
 s3://ngi-igenomes/igenomes/Pan_troglodytes/NCBI/build2.1/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Pan_troglodytes/NCBI/build2.1/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Pan_troglodytes/NCBI/build2.1/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Pan_troglodytes/NCBI/build2.1/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Pan_troglodytes/NCBI/build2.1/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Pan_troglodytes/NCBI/build2.1/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Pan_troglodytes/NCBI/build2.1/Sequence/STARIndex/chrName.txt
@@ -11877,7 +11877,7 @@ s3://ngi-igenomes/igenomes/Pan_troglodytes/NCBI/build3.1/Sequence/Chromosomes/X.
 s3://ngi-igenomes/igenomes/Pan_troglodytes/NCBI/build3.1/Sequence/Chromosomes/Y.fa
 s3://ngi-igenomes/igenomes/Pan_troglodytes/NCBI/build3.1/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Pan_troglodytes/NCBI/build3.1/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Pan_troglodytes/NCBI/build3.1/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Pan_troglodytes/NCBI/build3.1/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Pan_troglodytes/NCBI/build3.1/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Pan_troglodytes/NCBI/build3.1/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Pan_troglodytes/NCBI/build3.1/Sequence/STARIndex/chrName.txt
@@ -11987,7 +11987,7 @@ s3://ngi-igenomes/igenomes/Pan_troglodytes/UCSC/panTro2/Sequence/Chromosomes/chr
 s3://ngi-igenomes/igenomes/Pan_troglodytes/UCSC/panTro2/Sequence/Chromosomes/chrY.fa
 s3://ngi-igenomes/igenomes/Pan_troglodytes/UCSC/panTro2/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Pan_troglodytes/UCSC/panTro2/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Pan_troglodytes/UCSC/panTro2/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Pan_troglodytes/UCSC/panTro2/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Pan_troglodytes/UCSC/panTro2/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Pan_troglodytes/UCSC/panTro2/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Pan_troglodytes/UCSC/panTro2/Sequence/STARIndex/chrName.txt
@@ -12097,7 +12097,7 @@ s3://ngi-igenomes/igenomes/Pan_troglodytes/UCSC/panTro3/Sequence/Chromosomes/chr
 s3://ngi-igenomes/igenomes/Pan_troglodytes/UCSC/panTro3/Sequence/Chromosomes/chrY.fa
 s3://ngi-igenomes/igenomes/Pan_troglodytes/UCSC/panTro3/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Pan_troglodytes/UCSC/panTro3/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Pan_troglodytes/UCSC/panTro3/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Pan_troglodytes/UCSC/panTro3/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Pan_troglodytes/UCSC/panTro3/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Pan_troglodytes/UCSC/panTro3/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Pan_troglodytes/UCSC/panTro3/Sequence/STARIndex/chrName.txt
@@ -12207,7 +12207,7 @@ s3://ngi-igenomes/igenomes/Pan_troglodytes/UCSC/panTro4/Sequence/Chromosomes/chr
 s3://ngi-igenomes/igenomes/Pan_troglodytes/UCSC/panTro4/Sequence/Chromosomes/chrY.fa
 s3://ngi-igenomes/igenomes/Pan_troglodytes/UCSC/panTro4/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Pan_troglodytes/UCSC/panTro4/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Pan_troglodytes/UCSC/panTro4/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Pan_troglodytes/UCSC/panTro4/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Pan_troglodytes/UCSC/panTro4/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Pan_troglodytes/UCSC/panTro4/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Pan_troglodytes/UCSC/panTro4/Sequence/STARIndex/chrName.txt
@@ -12570,7 +12570,7 @@ s3://ngi-igenomes/igenomes/Rattus_norvegicus/Ensembl/RGSC3.4/Sequence/Chromosome
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/Ensembl/RGSC3.4/Sequence/Chromosomes/X.fa
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/Ensembl/RGSC3.4/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/Ensembl/RGSC3.4/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Rattus_norvegicus/Ensembl/RGSC3.4/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Rattus_norvegicus/Ensembl/RGSC3.4/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/Ensembl/RGSC3.4/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/Ensembl/RGSC3.4/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/Ensembl/RGSC3.4/Sequence/STARIndex/chrName.txt
@@ -12677,7 +12677,7 @@ s3://ngi-igenomes/igenomes/Rattus_norvegicus/Ensembl/Rnor_5.0/Sequence/Chromosom
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/Ensembl/Rnor_5.0/Sequence/Chromosomes/X.fa
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/Ensembl/Rnor_5.0/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/Ensembl/Rnor_5.0/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Rattus_norvegicus/Ensembl/Rnor_5.0/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Rattus_norvegicus/Ensembl/Rnor_5.0/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/Ensembl/Rnor_5.0/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/Ensembl/Rnor_5.0/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/Ensembl/Rnor_5.0/Sequence/STARIndex/chrName.txt
@@ -12785,7 +12785,7 @@ s3://ngi-igenomes/igenomes/Rattus_norvegicus/Ensembl/Rnor_6.0/Sequence/Chromosom
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/Ensembl/Rnor_6.0/Sequence/Chromosomes/Y.fa
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/Ensembl/Rnor_6.0/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/Ensembl/Rnor_6.0/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Rattus_norvegicus/Ensembl/Rnor_6.0/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Rattus_norvegicus/Ensembl/Rnor_6.0/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/Ensembl/Rnor_6.0/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/Ensembl/Rnor_6.0/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/Ensembl/Rnor_6.0/Sequence/STARIndex/chrName.txt
@@ -12891,7 +12891,7 @@ s3://ngi-igenomes/igenomes/Rattus_norvegicus/NCBI/RGSC_v3.4/Sequence/Chromosomes
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/NCBI/RGSC_v3.4/Sequence/Chromosomes/X.fa
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/NCBI/RGSC_v3.4/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/NCBI/RGSC_v3.4/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Rattus_norvegicus/NCBI/RGSC_v3.4/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Rattus_norvegicus/NCBI/RGSC_v3.4/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/NCBI/RGSC_v3.4/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/NCBI/RGSC_v3.4/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/NCBI/RGSC_v3.4/Sequence/STARIndex/chrName.txt
@@ -13041,7 +13041,7 @@ s3://ngi-igenomes/igenomes/Rattus_norvegicus/NCBI/Rnor_5.0/Sequence/Chromosomes/
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/NCBI/Rnor_5.0/Sequence/Chromosomes/X.fa
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/NCBI/Rnor_5.0/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/NCBI/Rnor_5.0/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Rattus_norvegicus/NCBI/Rnor_5.0/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Rattus_norvegicus/NCBI/Rnor_5.0/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/NCBI/Rnor_5.0/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/NCBI/Rnor_5.0/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/NCBI/Rnor_5.0/Sequence/STARIndex/chrName.txt
@@ -13147,7 +13147,7 @@ s3://ngi-igenomes/igenomes/Rattus_norvegicus/NCBI/Rnor_6.0/Sequence/Chromosomes/
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/NCBI/Rnor_6.0/Sequence/Chromosomes/Y.fa
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/NCBI/Rnor_6.0/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/NCBI/Rnor_6.0/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Rattus_norvegicus/NCBI/Rnor_6.0/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Rattus_norvegicus/NCBI/Rnor_6.0/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/NCBI/Rnor_6.0/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/NCBI/Rnor_6.0/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/NCBI/Rnor_6.0/Sequence/STARIndex/chrName.txt
@@ -13256,7 +13256,7 @@ s3://ngi-igenomes/igenomes/Rattus_norvegicus/UCSC/rn4/Sequence/Chromosomes/chrM.
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/UCSC/rn4/Sequence/Chromosomes/chrX.fa
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/UCSC/rn4/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/UCSC/rn4/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Rattus_norvegicus/UCSC/rn4/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Rattus_norvegicus/UCSC/rn4/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/UCSC/rn4/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/UCSC/rn4/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/UCSC/rn4/Sequence/STARIndex/chrName.txt
@@ -13364,7 +13364,7 @@ s3://ngi-igenomes/igenomes/Rattus_norvegicus/UCSC/rn5/Sequence/Chromosomes/chrM.
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/UCSC/rn5/Sequence/Chromosomes/chrX.fa
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/UCSC/rn5/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/UCSC/rn5/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Rattus_norvegicus/UCSC/rn5/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Rattus_norvegicus/UCSC/rn5/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/UCSC/rn5/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/UCSC/rn5/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/UCSC/rn5/Sequence/STARIndex/chrName.txt
@@ -13472,7 +13472,7 @@ s3://ngi-igenomes/igenomes/Rattus_norvegicus/UCSC/rn6/Sequence/Chromosomes/chrX.
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/UCSC/rn6/Sequence/Chromosomes/chrY.fa
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/UCSC/rn6/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/UCSC/rn6/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Rattus_norvegicus/UCSC/rn6/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Rattus_norvegicus/UCSC/rn6/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/UCSC/rn6/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/UCSC/rn6/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Rattus_norvegicus/UCSC/rn6/Sequence/STARIndex/chrName.txt
@@ -14853,7 +14853,7 @@ s3://ngi-igenomes/igenomes/Sus_scrofa/Ensembl/Sscrofa10.2/Sequence/Chromosomes/X
 s3://ngi-igenomes/igenomes/Sus_scrofa/Ensembl/Sscrofa10.2/Sequence/Chromosomes/Y.fa
 s3://ngi-igenomes/igenomes/Sus_scrofa/Ensembl/Sscrofa10.2/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Sus_scrofa/Ensembl/Sscrofa10.2/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Sus_scrofa/Ensembl/Sscrofa10.2/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Sus_scrofa/Ensembl/Sscrofa10.2/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Sus_scrofa/Ensembl/Sscrofa10.2/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Sus_scrofa/Ensembl/Sscrofa10.2/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Sus_scrofa/Ensembl/Sscrofa10.2/Sequence/STARIndex/chrName.txt
@@ -14957,7 +14957,7 @@ s3://ngi-igenomes/igenomes/Sus_scrofa/Ensembl/Sscrofa9/Sequence/Chromosomes/MT.f
 s3://ngi-igenomes/igenomes/Sus_scrofa/Ensembl/Sscrofa9/Sequence/Chromosomes/X.fa
 s3://ngi-igenomes/igenomes/Sus_scrofa/Ensembl/Sscrofa9/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Sus_scrofa/Ensembl/Sscrofa9/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Sus_scrofa/Ensembl/Sscrofa9/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Sus_scrofa/Ensembl/Sscrofa9/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Sus_scrofa/Ensembl/Sscrofa9/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Sus_scrofa/Ensembl/Sscrofa9/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Sus_scrofa/Ensembl/Sscrofa9/Sequence/STARIndex/chrName.txt
@@ -15060,7 +15060,7 @@ s3://ngi-igenomes/igenomes/Sus_scrofa/NCBI/Sscrofa10.2/Sequence/Chromosomes/MT.f
 s3://ngi-igenomes/igenomes/Sus_scrofa/NCBI/Sscrofa10.2/Sequence/Chromosomes/X.fa
 s3://ngi-igenomes/igenomes/Sus_scrofa/NCBI/Sscrofa10.2/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Sus_scrofa/NCBI/Sscrofa10.2/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Sus_scrofa/NCBI/Sscrofa10.2/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Sus_scrofa/NCBI/Sscrofa10.2/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Sus_scrofa/NCBI/Sscrofa10.2/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Sus_scrofa/NCBI/Sscrofa10.2/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Sus_scrofa/NCBI/Sscrofa10.2/Sequence/STARIndex/chrName.txt
@@ -15160,7 +15160,7 @@ s3://ngi-igenomes/igenomes/Sus_scrofa/NCBI/Sscrofa10/Sequence/Chromosomes/MT.fa
 s3://ngi-igenomes/igenomes/Sus_scrofa/NCBI/Sscrofa10/Sequence/Chromosomes/X.fa
 s3://ngi-igenomes/igenomes/Sus_scrofa/NCBI/Sscrofa10/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Sus_scrofa/NCBI/Sscrofa10/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Sus_scrofa/NCBI/Sscrofa10/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Sus_scrofa/NCBI/Sscrofa10/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Sus_scrofa/NCBI/Sscrofa10/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Sus_scrofa/NCBI/Sscrofa10/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Sus_scrofa/NCBI/Sscrofa10/Sequence/STARIndex/chrName.txt
@@ -15257,7 +15257,7 @@ s3://ngi-igenomes/igenomes/Sus_scrofa/NCBI/Sscrofa9.2/Sequence/Chromosomes/MT.fa
 s3://ngi-igenomes/igenomes/Sus_scrofa/NCBI/Sscrofa9.2/Sequence/Chromosomes/X.fa
 s3://ngi-igenomes/igenomes/Sus_scrofa/NCBI/Sscrofa9.2/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Sus_scrofa/NCBI/Sscrofa9.2/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Sus_scrofa/NCBI/Sscrofa9.2/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Sus_scrofa/NCBI/Sscrofa9.2/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Sus_scrofa/NCBI/Sscrofa9.2/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Sus_scrofa/NCBI/Sscrofa9.2/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Sus_scrofa/NCBI/Sscrofa9.2/Sequence/STARIndex/chrName.txt
@@ -15357,7 +15357,7 @@ s3://ngi-igenomes/igenomes/Sus_scrofa/UCSC/susScr2/Sequence/Chromosomes/chrM.fa
 s3://ngi-igenomes/igenomes/Sus_scrofa/UCSC/susScr2/Sequence/Chromosomes/chrX.fa
 s3://ngi-igenomes/igenomes/Sus_scrofa/UCSC/susScr2/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Sus_scrofa/UCSC/susScr2/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Sus_scrofa/UCSC/susScr2/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Sus_scrofa/UCSC/susScr2/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Sus_scrofa/UCSC/susScr2/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Sus_scrofa/UCSC/susScr2/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Sus_scrofa/UCSC/susScr2/Sequence/STARIndex/chrName.txt
@@ -15454,7 +15454,7 @@ s3://ngi-igenomes/igenomes/Sus_scrofa/UCSC/susScr3/Sequence/Chromosomes/chrX.fa
 s3://ngi-igenomes/igenomes/Sus_scrofa/UCSC/susScr3/Sequence/Chromosomes/chrY.fa
 s3://ngi-igenomes/igenomes/Sus_scrofa/UCSC/susScr3/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Sus_scrofa/UCSC/susScr3/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Sus_scrofa/UCSC/susScr3/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Sus_scrofa/UCSC/susScr3/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Sus_scrofa/UCSC/susScr3/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Sus_scrofa/UCSC/susScr3/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Sus_scrofa/UCSC/susScr3/Sequence/STARIndex/chrName.txt
@@ -15551,7 +15551,7 @@ s3://ngi-igenomes/igenomes/Zea_mays/Ensembl/AGPv2/Sequence/Chromosomes/MT.fa
 s3://ngi-igenomes/igenomes/Zea_mays/Ensembl/AGPv2/Sequence/Chromosomes/chloroplast.fa
 s3://ngi-igenomes/igenomes/Zea_mays/Ensembl/AGPv2/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Zea_mays/Ensembl/AGPv2/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Zea_mays/Ensembl/AGPv2/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Zea_mays/Ensembl/AGPv2/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Zea_mays/Ensembl/AGPv2/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Zea_mays/Ensembl/AGPv2/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Zea_mays/Ensembl/AGPv2/Sequence/STARIndex/chrName.txt
@@ -15647,7 +15647,7 @@ s3://ngi-igenomes/igenomes/Zea_mays/Ensembl/AGPv3/Sequence/Chromosomes/MT.fa
 s3://ngi-igenomes/igenomes/Zea_mays/Ensembl/AGPv3/Sequence/Chromosomes/Pt.fa
 s3://ngi-igenomes/igenomes/Zea_mays/Ensembl/AGPv3/Sequence/STARIndex/Genome
 s3://ngi-igenomes/igenomes/Zea_mays/Ensembl/AGPv3/Sequence/STARIndex/Log.out
-s3://ngi-igenomes/ igenomes/Zea_mays/Ensembl/AGPv3/Sequence/STARIndex/SA
+s3://ngi-igenomes/igenomes/Zea_mays/Ensembl/AGPv3/Sequence/STARIndex/SA
 s3://ngi-igenomes/igenomes/Zea_mays/Ensembl/AGPv3/Sequence/STARIndex/SAindex
 s3://ngi-igenomes/igenomes/Zea_mays/Ensembl/AGPv3/Sequence/STARIndex/chrLength.txt
 s3://ngi-igenomes/igenomes/Zea_mays/Ensembl/AGPv3/Sequence/STARIndex/chrName.txt
