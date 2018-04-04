@@ -192,6 +192,8 @@ Any updates to this arrangement will be posted here. If you have any questions p
 #### Version v0.3 (dev)
 
 * Made a web interface for generating aws s3 sync commands _(not everyone likes random command line scripts..)_
+* Now that Amazon are taking the cost of the hosting, everything is fully public
+    * Added `--no-sign-request` to the commands so that they work without authentication
 
 #### [Version v0.2](https://github.com/ewels/AWS-iGenomes/releases/tag/v0.2) - 2016-05-25
 
