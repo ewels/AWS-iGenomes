@@ -98,7 +98,7 @@ Within each reference build, the following resources are typically available (wi
     * smRNA ([miRBase](http://www.mirbase.org/))
     * Variation
 
-An additional special-case is the GATK bundles, available for _Homo sapiens_ (`b37`, `hg19` and `hg38`).
+An additional special-case is the GATK bundles, available for _Homo sapiens_ (`b37`, `hg19`, `hg38`, `GRCh37` and `GRCh38`).
 
 See [Data origin](#data-origin) below for more details of how these files were generated.
 
@@ -194,6 +194,9 @@ Any updates to this arrangement will be posted here. If you have any questions p
 * Made a web interface for generating aws s3 sync commands _(not everyone likes random command line scripts..)_
 * Now that Amazon are taking the cost of the hosting, everything is fully public
     * Added `--no-sign-request` to the commands so that they work without authentication
+* Added new GRCh37 and GRCh38 builds for GATK
+    * Different to the existing hg18 and hg19 builds only in that the file organisation is cleaner and consistent with the rest of iGenomes (old builds left for backwards-compatibility)
+    * Contain new indexes for BWA. More to be added in the future.
 
 #### [Version v0.2](https://github.com/ewels/AWS-iGenomes/releases/tag/v0.2) - 2016-05-25
 
