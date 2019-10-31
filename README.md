@@ -177,6 +177,33 @@ Please note that `b37/CEUTrio.HiSeq.WGS.b37.NA12878.bam` and associated files ar
 This file is ~355GB and with the FTP download limiting from Broad it was going to take nearly
 a year to transfer.
 
+#### Mouse Bundles
+
+The [Mouse Genome Project](https://www.sanger.ac.uk/science/data/mouse-genomes-project) data was added to allow for the usage of `GRCm38` data with the [Sarek](https://github.com/nf-core/sarek) pipeline. This data was simply downloaded from the [MGP FTP](ftp://ftp-mouse.sanger.ac.uk/) and additional files were created.
+
+### Downloaded Files
+
+These included the dbSNP SNP files with index and the dbSNP Indel files with corresponding index. 
+
+`mgp.v5.merged.snps_all.dbSNP142.vcf.gz`
+`mgp.v5.merged.snps_all.dbSNP142.vcf.gz.tbi`
+`mgp.v5.merged.indels.dbSNP142.normed.vcf.gz`
+`mgp.v5.merged.indels.dbSNP142.normed.vcf.gz.tbi`
+
+### Genome BED
+
+While the annotation folder contains a BED file for gene annotation, there was no intervals BED or interval list as required for running GATK available. This was simply created using the `genome.fa.fai` of `GRCm38` and modified as follows:
+
+```bash
+awk -v FS='\t' -v OFS='\t' '{ print $1, "0", $2 }' genome.fa.fai > wgs_calling_regions.grcm38.bed
+```
+
+Then we created an `interval_list` file using this command:
+
+```bash
+gatk BedToIntervalList --INPUT References/GRCm38_calling_list.bed --OUTPUT References/GRCm38_calling_list.list --SEQUENCE_DICTIONARY References/genome.dict
+```
+
 #### More details
 STAR, Bismark and BED12 additions were kindly done by the UPPMAX team. Full details and exactly scripts used for this can be found at [github.com/UPPMAX/bio-data](https://github.com/UPPMAX/bio-data/tree/master/igenomes/index).
 
