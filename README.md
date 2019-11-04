@@ -177,7 +177,7 @@ Please note that `b37/CEUTrio.HiSeq.WGS.b37.NA12878.bam` and associated files ar
 This file is ~355GB and with the FTP download limiting from Broad it was going to take nearly
 a year to transfer.
 
-#### Mouse Bundles
+## Mouse Bundles
 
 The [Mouse Genome Project](https://www.sanger.ac.uk/science/data/mouse-genomes-project) data was added to allow for the usage of `GRCm38` data with the [Sarek](https://github.com/nf-core/sarek) pipeline. This data was simply downloaded from the [MGP FTP](ftp://ftp-mouse.sanger.ac.uk/) and additional files were created.
 
