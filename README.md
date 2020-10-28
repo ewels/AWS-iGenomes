@@ -188,7 +188,7 @@ These files were addeed to AWS-iGenomes in November 2019.
 
 #### Downloaded Files
 
-These included the dbSNP SNP files with index and the dbSNP Indel files with corresponding index. 
+These included the dbSNP SNP files with index and the dbSNP Indel files with corresponding index.
 
 ```
 mgp.v5.merged.snps_all.dbSNP142.vcf.gz
@@ -212,7 +212,7 @@ gatk BedToIntervalList --INPUT References/GRCm38_calling_list.bed --OUTPUT Refer
 ```
 
 ## The Future
-AWS-iGenomes is now an AWS Open Data Resource (see https://registry.opendata.aws/aws-igenomes/). AWS has agreed to host up to 8TB data for AWS-iGenomes dataset until at least 30 January 2021. At that time I hope that the agreement will be renewed.
+AWS-iGenomes is now an AWS Open Data Resource (see https://registry.opendata.aws/aws-igenomes/). AWS has agreed to host up to 8TB data for AWS-iGenomes dataset until at least 28th October 2022. The resource has been renewed once so far and I hope that it will continue to be renewed for the forseeable future.
 
 If you have any questions please get in touch with [Phil Ewels](http://phil.ewels.co.uk) (phil.ewels@scilifelab.se, [@ewels](https://github.com/ewels)) or create an issue on this repository.
 
