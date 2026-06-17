@@ -180,6 +180,16 @@ Please note that `b37/CEUTrio.HiSeq.WGS.b37.NA12878.bam` and associated files ar
 This file is ~355GB and with the FTP download limiting from Broad it was going to take nearly
 a year to transfer.
 
+Annotated files from the GATK Bundles were re-bundled for `GRCh37` and `GRCh38` builds, by the developers of [nf-core/sarek](https://github.com/nf-core/sarek).
+- `Annotation/ASCAT`: Here are `acLoci` and `acLociGC` files made following instructions in [nf-core/sarek documentation](https://github.com/nf-core/sarek/blob/master/docs/ascat.md).
+- `Annotation/GermlineResource`: The [germline resource VCF file](https://software.broadinstitute.org/gatk/documentation/tooldocs/current/org_broadinstitute_hellbender_tools_walkers_mutect_Mutect2.php#--germline-resource) (bgzipped and tabixed) are needed by GATK4 Mutect2.
+Smaller, stripped gnomAD VCF file (most of the annotation is removed and only calls signed by PASS are stored) are also included in this folder.
+- `Sequence/Length`: This file `len` files is the fasta index file from `Sequence/WholeGenome` with only the chromosomes included in `Sequence/Chromosomes`
+
+#### More details
+
+STAR, Bismark and BED12 additions were kindly done by the UPPMAX team. Full details and exactly scripts used for this can be found at [github.com/UPPMAX/bio-data](https://github.com/UPPMAX/bio-data/tree/master/igenomes/index).
+
 ### Mouse Bundles
 
 The [Mouse Genome Project](https://www.sanger.ac.uk/science/data/mouse-genomes-project) data was added to allow for the usage of `GRCm38` data with the [Sarek](https://github.com/nf-core/sarek) pipeline. This data was simply downloaded from the [MGP FTP](ftp://ftp-mouse.sanger.ac.uk/) and additional files were created.
